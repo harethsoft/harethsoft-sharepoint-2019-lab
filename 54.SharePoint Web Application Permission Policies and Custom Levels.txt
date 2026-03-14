@@ -1,0 +1,36 @@
+**SharePoint Web Application Permission Policies and Custom Levels**
+
+ default and custom permission management, here is the step-by-step guide for configuring access at the web application and site levels
+
+
+
+**Step 1: Understand Default Web Application Policies**
+Recognize that SharePoint automatically creates four default permission policies for every web application: **Full Control, Full Read, Deny Write, and Deny All**.
+
+**Step 2: Navigate to Web Application Management**
+Open the **Central Administration** portal, go to the **Application Management** section, and select the **"Manage web applications"** link to see your farm's active applications.
+
+**Step 3: Access the Permission Policy Settings**
+Select a specific web application from the list and click on the **"Permission Policy"** button in the top ribbon menu to view its current security configurations.
+
+**Step 4: Review Detailed Policy Settings**
+Click on any of the default policies to see the specific settings for **Grant or Denial** permissions across site actions and personal-level activities.
+
+**Step 5: Transition to Site-Level Permissions**
+To manage more granular access for specific content, navigate to your site, select **Site Information**, and click on **"View all site settings."**
+
+**Step 6: Locate Permission Levels**
+Click on the **"Site permissions"** link and then select **"Permission levels"** to view the various predefined access tiers available for that specific site.
+
+**Step 7: Identify Custom Requirements**
+Review the existing list of permission levels to determine if you need to create an additional, more specific level to meet unique organizational needs.
+
+**Step 8: Create a New Permission Level**
+Click on **"Add a Permission Level"** to begin the creation process. Provide a clear name and description for the new security profile.
+
+**Step 9: Define Specific Access Rights**
+Check the boxes for the particular **site and personal permissions** (such as viewing items, adding items, or creating alerts) that you want to include in this custom level.
+
+**Step 10: Follow Best Practice Recommendations**
+Always **create a new permission level** rather than altering the default ones. This ensures you maintain the original system integrity and can easily revert settings if needed.
+

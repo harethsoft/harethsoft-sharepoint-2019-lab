@@ -1,0 +1,33 @@
+**Comprehensive Customization of SharePoint Classic Sites**
+
+ interface components and administrative settings of classic SharePoint sites, here is the exhaustive step-by-step guide,
+**Step 1: Identify Core Interface Components**
+Recognize the classic layout which consists of the **Site Logo**, the **Ribbon** menu, the **Quick Launch** (left navigation), the **Top Navigation**, and the central **Content Area** usually containing web parts like Promoted Links.
+
+**Step 2: Access Site Content and Settings**
+Use the **gear icon** to navigate between **"Site Content"** (to view all lists, libraries, and apps) and **"Site Settings"** (for administrative configurations). If the view defaults to modern, use the **"Return to Classic SharePoint"** button at the bottom.
+
+**Step 3: Modify Site Identity (Title, Logo, Description)**
+Go to Site Settings > **Title, description, and logo** to update the site's name. You can upload a logo **from your computer** (saved by default in the **Site Assets library**) or select one already stored in SharePoint.
+
+**Step 4: Execute Quick Navigation Edits**
+Click **"Edit Links"** on the Quick Launch or Top Navigation to use **drag-and-drop** for reordering items, or click the **plus (+) icon** to add external URLs by providing the text and web address.
+
+**Step 5: Create Hierarchical Navigation Headings**
+In Site Settings > **Quick Launch**, use **"New Heading"** to create parent categories. Then, use **"New Navigation Link"** and select the parent to nest links (like a "Leave Policy" document) under that specific heading.
+
+**Step 6: Configure Navigation Elements and Tree View**
+Use the **"Navigation element"** settings to toggle the visibility of the Quick Launch or enable the **"Tree View,"** which displays the entire site content structure in the left panel.
+
+**Step 7: Optimize View with Focus Content and Social Tools**
+Use **"Focus Content"** to hide the logo and navigation, expanding the content area for large data sets. Additionally, use **"Follow"** to track site updates and **"Share"** to quickly grant user permissions via email invitation.
+
+**Step 8: Master Advanced Search and Refiners**
+Utilize the **Search Box** and use **"Refiners"** (located on the left of results) to filter by result type (PDF, Word, Excel) or Author. Use **"Advanced Search"** for keyword-specific queries or **"Alert Me"** to receive summaries of search changes.
+
+**Step 9: Transform Visuals via "Change the Look"**
+Select **"Change the look"** to apply out-of-the-box **Themes**. You can customize color combinations, fonts, and **Layouts** (e.g., the **"Oslo" layout** removes the left navigation while **"Seattle"** keeps it).
+
+**Step 10: Manage Site vs. Site Collection Features**
+Distinguish between **"Manage site features"** (applies only to the current site) and **"Site collection features"** (activates functionality for all sites within the collection) to enable additional system capabilities.
+

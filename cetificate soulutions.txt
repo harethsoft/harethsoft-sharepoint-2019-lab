@@ -1,0 +1,15 @@
+في خانة Common Name (CN)، اكتب بالضبط: harethsoftportal.harethsoft.com.
+
+
+طريقة إضافة الـ SAN من داخل هذه الشاشة:
+بدلاً من البحث عن كلمة "Attributes"، سنقوم بإضافتها يدوياً من قسم الـ Alternative name الموجود أسفل اليمين في صورتك:
+
+في جهة اليمين، تحت كلمة Alternative name، اضغط على السهم الصغير في خانة Type.
+
+اختر من القائمة المنسدلة خيار DNS.
+
+في خانة Value، اكتب الاسم الأول: harethsoftportal ثم اضغط على زر Add الموجود في المنتصف.
+
+كرر العملية: اختر DNS مرة أخرى، واكتب في الـ Value: harethsoftportal.harethsoft.com ثم اضغط Add.
+
+كرر العملية مرة أخيرة: اختر DNS واكتب اسم السيرفر القديم sharepointback ثم اضغط Add.

@@ -1,0 +1,34 @@
+**On-Premise Root Certificate Authority (CA) Installation and Configuration**
+
+setup of a Microsoft Certificate Authority server, here is the step-by-step guide for creating a root CA,
+
+**Step 1: Understand the Role of the CA Server**
+Recognize that a **Certificate Authority (CA) server** is a critical component used to issue security certificates for **HTTPS bindings** in SharePoint or other on-premise websites to ensure secure communication.
+
+**Step 2: Access Server Manager for Role Installation**
+Log in to your **domain controller** (or a dedicated separate server) and open the **Server Manager**. Click on **"Add roles and features"** to begin the installation process.
+
+**Step 3: Select Active Directory Certificate Services**
+Navigate through the wizard and check the box for **Active Directory Certificate Services (AD CS)**. Allow the system to add the necessary prerequisite features for this role.
+
+**Step 4: Choose Essential Role Services**
+Select the specific role services to install; for issuing certificates via web interfaces, **Certification Authority** and **Certification Authority Web Enrollment** are the most important components to include.
+
+**Step 5: Perform Post-Deployment Configuration**
+After the installation is complete, it is recommended to **restart the server**. Once restarted, click the notification to **"Configure Active Directory Certificate Services"** and specify the administrator credentials.
+
+**Step 6: Select the CA Type (Enterprise vs. Standalone)**
+Choose **Enterprise CA** if the server is a member of the domain and will issue certificates based on domain policies. Choose **Standalone CA** if the server is part of a workgroup and does not require Active Directory.
+
+**Step 7: Define the CA Hierarchy (Root vs. Subordinate)**
+Select **Root CA** if this is the first and primary certificate server in your organization. If you already have a centralized CA and are setting up a departmental server, you would select **Subordinate CA**.
+
+**Step 8: Configure the Private Key and Cryptography**
+Choose to **create a new private key** and select a common cryptographic provider, such as **SHA 256**, ensuring it meets your specific system security requirements.
+
+**Step 9: Set the Certificate Validity Period**
+Specify the **validity period** for the certificates the CA will issue (e.g., **5 years**). After this period, any issued certificates will expire and must be renewed or reallocated.
+
+**Step 10: Verify Successful Service Operation**
+After finishing the configuration and performing a final restart, open the **Certificate Authority** window. A **green indication** confirms that your CA server is running successfully and is ready to manage issued or revoked certificates.
+

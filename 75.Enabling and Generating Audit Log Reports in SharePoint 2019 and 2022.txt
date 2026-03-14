@@ -1,0 +1,34 @@
+**Enabling and Generating Audit Log Reports in SharePoint 2019 and 2022**
+
+ activation of reporting features and the generation of audit logs, here is the exhaustive step-by-step guide, 
+
+**Step 1: Confirm Prerequisite Audit Settings**
+Ensure that you have already enabled the **site collection audit settings**, as the ability to generate reports depends on the system first being configured to capture audit data.
+
+**Step 2: Identify Missing Reporting Options**
+Recognize that even if auditing is enabled, the **"Audit log reports"** option may not initially appear in your site settings menu until the specific reporting feature is activated.
+
+**Step 3: Access Site Collection Features**
+Navigate to the **"Site settings"** menu and specifically enter the **"Site collection features"** section to manage the available modules for your site.
+
+**Step 4: Activate the Reporting Module**
+Search for the **"Reporting" module** within the features list and click **Activate**; this is the essential step required to generate and view audit log reports.
+
+**Step 5: Refresh and Verify Interface Changes**
+Return to the home page or site settings and **refresh the page**; you should now see the **"Audit log reports"** option available under the Site Collection Administration header.
+
+**Step 6: Enter the Auditing Reports Interface**
+Launch the **Audit log reports interface**, which provides various options for viewing content activity, policy modifications, and custom reporting tools.
+
+**Step 7: Configure a Custom Audit Report**
+Select the option to **"Run a custom report,"** which is the most common professional practice for tracing specific activities within a defined environment.
+
+**Step 8: Apply Specific Filters and User Restrictions**
+Refine your report by specifying the **date and time range** and restricting the results to a **specific user** to narrow down the data you need to investigate.
+
+**Step 9: Select Targeted Event Triggers**
+Choose the specific events you wish to track, such as **deleting or restoring items** (the most common use case) or identifying which users **edited specific items**.
+
+**Step 10: Generate and Analyze the Excel Report**
+Click OK to save the report to your specified location; the system will generate a file in **Excel format** that provides a complete track of every activity executed by users or admins.
+

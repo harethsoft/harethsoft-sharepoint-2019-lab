@@ -1,0 +1,72 @@
+`
+## 3. Installing SharePoint – Creating SharePoint Application Server with Search Feature
+
+### 1. Prepare the SharePoint Application Server
+
+1. Install Windows Server on the SharePoint application server.
+2. Join the server to the domain.
+3. Set a static IP address.
+4. Verify DNS name resolution with the Domain Controller and SQL Server.
+5. Log in using the **sp19admin** account.
+
+Explanation:
+SharePoint application servers host Central Administration, Service Applications, and the Search service.
+Using sp19admin ensures sufficient permissions during installation.
+
+---
+
+### 2. Install SharePoint Prerequisites
+
+1. Mount the SharePoint 2019 media.
+2. Run **PrerequisiteInstaller.exe**.
+3. Accept the license terms.
+4. Allow the server to reboot if required.
+
+Explanation:
+Prerequisites install required components such as IIS, .NET Framework, and Windows features needed by SharePoint.
+
+---
+
+### 3. Install SharePoint Server 2019
+
+1. Run **Setup.exe** from the SharePoint media.
+2. Enter the SharePoint product key.
+3. Accept the license terms.
+4. Choose **Complete** installation.
+5. Finish the setup without running the configuration wizard yet.
+
+Explanation:
+Complete installation allows the server to host all SharePoint services, including Search.
+
+---
+
+### 4. Create the SharePoint Farm
+
+1. Launch **SharePoint Products Configuration Wizard**.
+2. Select **Create a new server farm**.
+3. Enter the SQL Server name.
+4. Specify the **sp19sql** account and password.
+5. Set the passphrase.
+6. Choose Application with search
+7.select NTLM
+7. Complete the wizard and wait for configuration to finish.
+
+Explanation:
+The farm connects SharePoint to SQL Server and creates the configuration and content databases.
+
+---
+
+### 5. Configure Search Service Application
+
+1. Open **Central Administration**.
+2. Go to **Manage Service Applications**.
+3. Click **New** and select **Search Service Application**.
+4. Use **sp19farm** as the service account.
+5. Complete the creation wizard.
+6. Verify Search components are created successfully.
+
+Explanation:
+The Search Service Application enables content crawling, indexing, and search functionality across SharePoint sites.
+
+---
+

@@ -1,0 +1,29 @@
+**SharePoint Databases**, here is the step-by-step guide on how SharePoint interacts with SQL Server to store data and settings,
+
+
+**Step 1: Understand the Data Storage Model**
+Recognize that SharePoint does not save any data within itself; instead, it saves all its data in a connected **Microsoft SQL Server**. You may have one or multiple database servers depending on your requirements.
+
+**Step 2: Identify the Configuration Database**
+When you first install SharePoint, the system automatically creates the **SharePoint_Config** database. This database is critical because it saves all the settings for the SharePoint application and the server farm. As a best practice, you should **never manually change settings** directly in this database.
+
+**Step 3: Identify the Admin Content Database**
+SharePoint also creates an **Admin Content** database (often with a random serial number). This specific database is responsible for saving the settings and operations of the **Central Administration** web interface.
+
+**Step 4: Understand the Content Database**
+All the actual website data and site collections you create are stored in **Content Databases**. By default, these use the prefix **"wss_content_"** followed by a unique name. While you can change the name, it is recommended to keep the default prefix.
+
+**Step 5: Verify Databases via Central Administration**
+To see your databases, go to **Central Administration**, navigate to **Application Management**, and select **Manage content databases**. Here you can verify the status of the database and see which site collections are residing within it.
+
+**Step 6: Monitor Site Collection Limits**
+Be aware of the capacity limits: SharePoint allows for a maximum of **5,000 site collections** within a single content database. You can monitor the current number of site collections and set warning levels through the management interface.
+
+**Step 7: Manage Database Size for Performance**
+For optimal performance, keep each content database size between **100 GB and 200 GB**. If a database exceeds 200 GB, read/write operations become "expensive," and you will notice the application's performance degrading significantly.
+
+**Step 8: Scale Using Additional Databases**
+When a database approaches the 200 GB limit, do not simply keep adding data. Instead, create an **additional content database** and host new site collections there to distribute the load and maintain high performance.
+
+**Step 9: Apply Quotas**
+To prevent a single database from growing too large, you can apply **quotas** to site collections. This ensures that departments (like HR or Finance) stay within their "territory" and do not consume all the available database space.

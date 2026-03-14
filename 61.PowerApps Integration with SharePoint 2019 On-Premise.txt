@@ -1,0 +1,34 @@
+**PowerApps Integration with SharePoint 2019 On-Premise**
+
+ connection between PowerApps and local SharePoint environments, here is the step-by-step guide for enabling this integration
+
+**Step 1: Identify the Integration Scope**
+Recognize that **PowerApps** can be integrated with **SharePoint 2019 on-premise** to enhance the platform's capabilities beyond standard out-of-the-box features.
+
+**Step 2: Acknowledge Technical Limitations**
+Understand that PowerApps has a specific limitation: it **cannot be implemented completely** within an on-premise domain.
+
+**Step 3: Deploy an Internet Connectivity Gateway**
+To bridge the gap between your local environment and the cloud, you must deploy a **dedicated server** for an **internet connectivity Gateway**.
+
+**Step 4: Establish the Server Link**
+Use the gateway access to successfully **link your PowerApps server** with your SharePoint technology.
+
+**Step 5: Subscribe to the PowerApp Facility**
+Ensure your organization has an active **subscription to the PowerApp facility** to unlock and enjoy the full benefits of the integration.
+
+**Step 6: Focus on Forms Customization**
+Utilize the integration primarily for **forms customization**, which is one of the most important aspects of using PowerApps with SharePoint.
+
+**Step 7: Modify Viewable Interface Elements**
+Change the **viewable views** of your SharePoint forms, allowing you to customize how data is presented to the end user.
+
+**Step 8: Reorder and Configure Options**
+Gain the ability to **change the options and orders** of fields within your forms to better suit your organizational workflows.
+
+**Step 9: Add and Define Conditional Fields**
+Enhance your forms by **adding new fields** and defining specific **conditions** for those fields to create dynamic user experiences.
+
+**Step 10: Centralize SharePoint Management**
+Use PowerApps as a centralized tool to **manage and control** various SharePoint elements through its advanced interface.
+

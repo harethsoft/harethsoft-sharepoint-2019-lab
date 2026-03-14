@@ -1,0 +1,32 @@
+**SharePoint Enterprise Search Center**, here is the step-by-step guide on how to set up a standard, professional search page for your organization,
+
+
+**Step 1: Understand the Need for a Search Center**
+While SharePoint provides small, default search boxes in Communication and Team sites, an **Enterprise Search Center** offers a more impressive, standard page for the entire organization. It provides advanced features like better filtering and specialized search categories that the small, out-of-the-box search boxes lack.
+
+**Step 2: Access Site Collection Creation**
+Go to **SharePoint Central Administration**, navigate to **Application Management**, and select **Create site collection**. Ensure you have the correct web application selected where you want the search center to reside.
+
+**Step 3: Define Site Identity and Template**
+Enter a **Title** (e.g., "hltf tech search center") and a URL for the site. Under the template selection, choose the **Enterprise Search Center** template, which is specifically designed to deliver an enterprise-wide search experience.
+
+**Step 4: Assign Administrators and Finalize**
+Assign both a **Primary** and a **Secondary Administrator** to ensure the site can be managed if one person is unavailable. Click **OK** to create the site collection.
+
+**Step 5: Verify the New Interface**
+Once created, navigate to the new site URL to see the template. You will notice a more user-friendly interface that includes specific tabs for searching **People, Conversations, and Videos**.
+
+**Step 6: Utilize Advanced Search Features**
+Unlike the basic search, this center allows users to see document previews, contributors, and last modified dates. It also offers **Advanced Search** options where users can apply multiple conditions and filters (like author or specific result types) to get accurate results.
+
+**Step 7: Bind the Search Center Globally**
+To ensure users are redirected to this professional page regardless of where they search from, copy the **URL of your new search center**. 
+
+**Step 8: Configure the Search Service Application**
+Go to Central Administration, select **Manage service applications**, and click on your **Search Service Application**. 
+
+**Step 9: Set the Global Search Center URL**
+Locate the option to **Set a search center URL**, paste the URL you copied from your new site, and click **OK**. This makes the new center the standard destination for all search queries across the web application.
+
+**Step 10: Refresh and Test**
+To ensure the settings take effect immediately, it is recommended to **restart the application pool** in IIS. Once refreshed, any search performed by a user in the web application will automatically redirect them to the new, feature-rich Enterprise Search Center.

@@ -1,0 +1,529 @@
+
+---
+
+## TITLE: Managing Web Application Settings in SharePoint 2019
+
+Product: Microsoft SharePoint 2019
+Area: Central Administration → Application Management → Manage Web Applications
+
+============================================================
+OVERVIEW
+========
+
+A Web Application in SharePoint is the top-level container that hosts site collections.
+All major security, policy, and configuration settings are controlled at this level.
+
+The following options appear in the ribbon when you select a Web Application.
+
+============================================================
+
+1. NEW
+   ============================================================
+
+Creates a new Web Application.
+
+Used to:
+
+* Define a new IIS website
+* Configure port and host header
+* Select authentication method (NTLM / Kerberos / Claims)
+* Assign application pool and service account
+* Choose content database
+
+This is the starting point for hosting new site collections.
+
+============================================================
+2) EXTEND
+=========
+
+Extends an existing Web Application.
+
+Used to:
+
+* Add another IIS site to the same content database
+* Support different authentication methods
+* Provide internal and external access
+
+Common use case:
+Internal URL (Windows Auth)
+External URL (Forms Auth)
+
+
+**EXTEND Web Application**    👇
+
+Product: Microsoft SharePoint 2019
+
+============================================================
+WHAT DOES "EXTEND" REALLY MEAN?
+===============================
+
+When you click **Extend**, you are:
+
+👉 Creating a second IIS website
+👉 For the SAME SharePoint Web Application
+👉 Using the SAME Content Database
+
+So the content does NOT change.
+Only the way users access it changes.
+
+============================================================
+IMPORTANT CONCEPT
+=================
+
+Think of it like this:
+
+One house
+Two doors
+
+Both doors lead to the same house.
+
+The "house" = Content Database
+The "doors" = Different IIS Websites / URLs
+
+============================================================
+WHY DO WE USE EXTEND?
+=====================
+
+Main reasons:
+
+1. Different authentication methods
+2. Internal vs External access
+3. Different zones (Default, Intranet, Internet, Extranet, Custom)
+
+============================================================
+REAL-WORLD EXAMPLE
+==================
+
+Let’s say you have a portal:
+
+Internal access:
+[http://portal](http://portal)
+Authentication: Windows (NTLM or Kerberos)
+
+Employees inside the company use this.
+
+Now you want partners outside the company to access the SAME content.
+
+You extend the Web Application and create:
+
+External access:
+[https://portal.company.com](https://portal.company.com)
+Authentication: Forms-Based Authentication (FBA)
+
+Now:
+
+Internal users → Windows Login
+External users → Username & Password (Forms)
+
+But both see the SAME sites and documents.
+
+============================================================
+WHAT CHANGES WHEN YOU EXTEND?
+=============================
+
+When you extend:
+
+✔ A new IIS website is created
+✔ A new binding (port/host header) is created
+✔ A new authentication method can be configured
+✔ A new zone is assigned
+
+But:
+
+✘ No new content database is created
+✘ No duplicate sites are created
+
+============================================================
+WHAT IS A ZONE?
+===============
+
+Each extended Web Application must use a different Zone:
+
+* Default
+* Intranet
+* Internet
+* Extranet
+* Custom
+
+Each zone can have:
+
+* Different authentication
+* Different permissions
+* Different policies
+
+============================================================
+WHEN SHOULD YOU NOT USE EXTEND?
+===============================
+
+Do NOT use Extend if:
+
+* You want separate content
+* You want separate databases
+* You want a completely different portal
+
+In that case, create a NEW Web Application.
+
+============================================================
+SHORT SUMMARY
+=============
+
+NEW = New house
+EXTEND = New door to the same house
+
+If you want, I can also explain:
+
+* How Extend works with Alternate Access Mappings (AAM)
+* How it works with Load Balancers
+* Or what happens in the IIS level technically 👌
+
+
+============================================================
+3) DELETE
+=========
+
+Deletes the selected Web Application.
+
+Options:
+
+* Delete IIS site only
+* Delete IIS site and content databases
+
+WARNING:
+Deleting content databases permanently removes all site collections.
+
+============================================================
+4) GENERAL SETTINGS
+===================
+
+Configures general behavior of the Web Application.
+
+Includes:
+
+* Time zone
+* Alerts settings
+* RSS settings
+* Browser file handling
+* Security validation timeout
+* Maximum upload size
+* Recycle Bin settings
+
+Common task:
+Increase maximum file upload size.
+
+============================================================
+5) MANAGE FEATURES
+==================
+
+Activates or deactivates Web Application–scoped features.
+
+These features affect all site collections under this Web Application.
+
+Example:
+Document ID Service Feature
+
+============================================================
+6) MANAGED PATHS
+================
+
+Defines URL structure for site collections.
+
+Types:
+
+* Explicit inclusion (e.g., /sites/hr)
+* Wildcard inclusion (e.g., /sites/*)
+
+Example:
+[http://portal/sites/hr](http://portal/sites/hr)
+
+ **Managed Paths** 
+
+Product: Microsoft SharePoint 2019
+
+============================================================
+WHAT ARE MANAGED PATHS?
+=======================
+
+Managed Paths define how URLs are structured for Site Collections
+inside a Web Application.
+
+They control where new Site Collections can be created.
+
+============================================================
+WHY DO WE NEED MANAGED PATHS?
+=============================
+
+Without Managed Paths, SharePoint would not know:
+
+* Under which URL a Site Collection can be created
+* How to organize site collections logically
+
+They help structure your portal cleanly.
+
+============================================================
+TYPES OF MANAGED PATHS
+======================
+
+There are TWO types:
+
+---
+
+1. Explicit Inclusion
+
+---
+
+This allows ONLY ONE Site Collection at that path.
+
+Example:
+
+Managed Path: /hr
+
+You can create:
+
+[http://portal/hr](http://portal/hr)
+
+But you CANNOT create:
+
+[http://portal/hr/payroll](http://portal/hr/payroll)
+[http://portal/hr/finance](http://portal/hr/finance)
+
+Because explicit allows only one root at that path.
+
+Use case:
+When you want a single dedicated Site Collection.
+
+---
+
+2. Wildcard Inclusion
+
+---
+
+This allows MULTIPLE Site Collections under the same path.
+
+Example:
+
+Managed Path: /sites
+
+You can create:
+
+[http://portal/sites/hr](http://portal/sites/hr)
+[http://portal/sites/finance](http://portal/sites/finance)
+[http://portal/sites/it](http://portal/sites/it)
+[http://portal/sites/marketing](http://portal/sites/marketing)
+
+Unlimited site collections under /sites
+
+Use case:
+Department-based structure.
+
+============================================================
+REAL-WORLD STRUCTURE EXAMPLE
+============================
+
+Let’s say your company portal is:
+
+[http://portal](http://portal)
+
+Managed Paths configured:
+
+Explicit:
+/
+(in root — only one site collection)
+
+Wildcard:
+/sites
+
+Now structure becomes:
+
+Root Site Collection:
+[http://portal](http://portal)
+
+Department Site Collections:
+[http://portal/sites/hr](http://portal/sites/hr)
+[http://portal/sites/finance](http://portal/sites/finance)
+[http://portal/sites/it](http://portal/sites/it)
+
+============================================================
+IMPORTANT DIFFERENCE
+====================
+
+Explicit = One site collection only
+Wildcard = Many site collections allowed
+
+============================================================
+COMMON DEFAULT SETTINGS
+=======================
+
+By default SharePoint usually creates:
+
+Wildcard:
+/sites
+
+So most admins create department sites under:
+
+/sites/
+
+============================================================
+WHEN SHOULD YOU USE EACH?
+=========================
+
+Use Explicit:
+
+* For main portal
+* For dedicated standalone areas
+
+Use Wildcard:
+
+* For departments
+* For project sites
+* For scalable environments
+
+============================================================
+IMPORTANT NOTE
+==============
+
+Managed Paths are defined at the Web Application level.
+
+They DO NOT create sites.
+They only define where sites are allowed to be created.
+
+============================================================
+SHORT SUMMARY
+=============
+
+Managed Paths = URL containers
+Explicit = Single container
+Wildcard = Multiple containers
+
+If you want, I can also explain:
+
+* Difference between Site Collection vs Subsite
+* Or how Managed Paths affect permissions and governance 👌
+
+
+============================================================
+7) SERVICE CONNECTIONS
+======================
+
+Connects the Web Application to Service Applications.
+
+Examples:
+
+* Managed Metadata Service
+* User Profile Service
+* Search Service
+
+If a service is not connected here, it will not function in this Web Application.
+
+============================================================
+8) AUTHENTICATION PROVIDERS
+===========================
+
+Configures authentication settings.
+
+Options:
+
+* Windows Authentication (NTLM / Kerberos)
+* Claims-based authentication
+* Forms-based authentication
+
+Used to:
+
+* Enable or disable anonymous access
+* Set authentication modes
+
+============================================================
+9) SELF-SERVICE SITE CREATION
+=============================
+
+Allows users to create their own site collections.
+
+Can be:
+
+* Enabled
+* Disabled
+
+Typically disabled in controlled enterprise environments.
+
+============================================================
+10) BLOCKED FILE TYPES
+======================
+
+Defines file extensions that cannot be uploaded.
+
+Example:
+.exe
+.bat
+.cmd
+
+Used for security control.
+
+============================================================
+11) USER PERMISSIONS
+====================
+
+Controls which permissions are available at the Web Application level.
+
+Example:
+You can disable the ability to create subsites globally.
+
+============================================================
+12) WEB PART SECURITY
+=====================
+
+Controls Web Part behavior.
+
+Includes:
+
+* Online Web Part Gallery
+* Script Editor restrictions
+
+Used to increase security.
+
+============================================================
+13) USER POLICY
+===============
+
+Applies permissions across all site collections.
+
+Used to:
+
+* Grant Full Control to administrators
+* Grant Read access to audit users
+
+Overrides site-level permissions.
+
+============================================================
+14) ANONYMOUS POLICY
+====================
+
+Defines permissions for anonymous users.
+
+Only applies if Anonymous Access is enabled.
+
+Example:
+Anonymous users can read content but not edit.
+
+============================================================
+15) PERMISSION POLICY
+=====================
+
+Creates reusable permission levels at Web Application scope.
+
+Used together with User Policy.
+
+Example:
+Create a custom “Auditor” permission level.
+
+============================================================
+SUMMARY
+=======
+
+Web Application settings control:
+
+* Security
+* Authentication
+* File handling
+* Service connections
+* Global permission policies
+
+Any change here affects all site collections inside the Web Application.

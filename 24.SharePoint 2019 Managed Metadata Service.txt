@@ -1,0 +1,31 @@
+ **SharePoint 2019 Managed Metadata Service**, here is the step-by-step guide on how to configure it,
+
+**Step 1: Understand the Service Purpose**
+The **Managed Metadata Service (MMS)** is used to create a **unified taxonomy of terms**. This allows you to standardize names and classifications that can be used consistently across your entire SharePoint farm and its websites.
+
+**Step 2: Navigate to Service Application Management**
+Open **SharePoint Central Administration**, go to the **Application Management** section, and click on **Manage service applications**.
+
+**Step 3: Create a New MMS Instance**
+Click the **New** button in the ribbon and select **Managed Metadata Service** from the dropdown list to begin the setup.
+
+**Step 4: Define Service and Database Names**
+Provide a name for the service, such as **"MMS Service"**. Specify the **database server** (e.g., "DB") and assign a unique name for the **MMS service database**.
+
+**Step 5: Configure a New Application Pool**
+It is recommended to **create a new application pool** for this service rather than using an existing one. This is because different services have their own security credentials and protocols, and separating them ensures better stability.
+
+**Step 6: Enter the Content Type Hub URL**
+Provide the URL of your **Central Website** (e.g., hltf Tech company) in the **Content Type Hub** field. Ensure the URL is copied only up to the port number to ensure the connection is established correctly.
+
+**Step 7: Finalize and Create**
+Click **OK** and wait for SharePoint to process the request. The system will create the service along with additional databases.
+
+**Step 8: Verify the Service Status**
+Once the process is finished, confirm that the **Managed Metadata Service** is listed and that its status is marked as **"Started"**.
+
+**Step 9: Access the Taxonomy Term Store**
+Click on the service name to see its details. This will open the **Taxonomy Term Store**, where you can manage how information is categorized within your environment.
+
+**Step 10: Customize Term Sets for the Organization**
+You can import sample stores, enable **Language Packs**, and define specific **Term Sets** like "Department," "Owner," or "Contact." You should configure the taxonomy to match the specific needs and structure of your organization.

@@ -1,0 +1,32 @@
+ **SharePoint 2019 User Profile Service Application**, here is the step-by-step guide on how to configure it, 
+
+
+**Step 1: Understand the Service Purpose**
+The **User Profile Service (UPS)** provides a central location for administrators to manage user profiles, enabling live synchronization from **Active Directory** or **Microsoft Azure**. It is also a mandatory prerequisite for features like **Target Audiencing**, **My Sites**, and social tagging.
+
+**Step 2: Check Service Dependencies**
+Before starting, ensure that the **Managed Metadata Service** and **Search Service Application** are already configured and running. If these dependencies are missing, the User Profile Service will generate errors during configuration.
+
+**Step 3: Access Service Application Management**
+Log in to the application server as a **super admin**. Open **SharePoint Central Administration**, navigate to **Application Management**, and select **Manage service applications**.
+
+**Step 4: Create a New User Profile Service**
+In the ribbon, click **New** and select **User Profile Service Application** from the list.
+
+**Step 5: Configure the Application Pool**
+**Best Practice:** Create a **separate application pool** (e.g., "UPS pool") specifically for this service. Because the User Profile Service is different in nature from other services, using a dedicated pool ensures better performance and security.
+
+**Step 6: Define the Database Names**
+The system will create three separate databases: the **Profile DB**, the **Synchronization DB**, and the **Social Tagging Database**. Provide clear names for these databases, such as "user profile db" and "socialdb", to store profile data and social collaboration metadata.
+
+**Step 7: Set the My Site Managed Path**
+Configure the **Personal** managed path, which is used for the creation and management of **My Sites** for individual users.
+
+**Step 8: Verify Successful Creation**
+Once the process is complete, click **OK** and refresh the service applications list. Verify that the **User Profile Service** appears and is working successfully.
+
+**Step 9: Review Profile Statistics and Status**
+Click on the service to see the details page. You can monitor the **number of user profiles** (initially zero) and the **Audience Compilation Status**, which is typically managed by background timer jobs.
+
+**Step 10: Start Profile Synchronization**
+To populate the service with data, select **Start full synchronization**. This process will pull all active profiles and groups from your **Active Directory** or domain, allowing you to manage user properties and prepare for "My Site" deployment.

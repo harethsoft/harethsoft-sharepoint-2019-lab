@@ -1,0 +1,42 @@
+**SharePoint On-Premise Resource Throttling and Optimization**
+
+ resource management and system thresholds, here is the step-by-step guide for maintaining an ideal SharePoint environment
+
+Resource Throttling in SharePoint
+
+Resource Throttling is a mechanism in SharePoint used to protect the server from performance problems by limiting how many resources a user request can consume.
+
+In simple terms, it prevents one user, query, or operation from using too much CPU, memory, or database resources that could slow down the entire SharePoint farm.
+
+
+
+**Step 1: Understand the Role of Resource Throttling**
+Recognize that resource throttling is critical for organizations storing large volumes of documents and handling thousands of concurrent users (e.g., 7,000 to 8,000) performing simultaneous read/write operations.
+
+**Step 2: Access Throttling Settings at the Web App Level**
+Navigate to the **Web Application** level in Central Administration, go to "General Settings," and select **Resource Throttling** to manage key performance indicators (KPIs).
+
+**Step 3: Maintain the List View Threshold**
+Set the **List View Threshold** (default 5,000). This is the maximum number of rows a query can retrieve in one view; keeping this at or below the default prevents database operations from consuming excessive resources.
+
+**Step 4: Manage Auditor and Administrator Thresholds**
+Define a separate threshold for **Auditors and Administrators** (default 20,000). This allows specific users to search or filter millions of records while maintaining a higher limit than standard users.
+
+**Step 5: Control Programmatic Overrides**
+Use the **Object Model Override** setting to allow users with sufficient permissions to bypass the list view threshold programmatically for specific, high-priority queries.
+
+**Step 6: Limit the List View Lookup Threshold**
+Restrict the **List View Lookup Threshold** (default 12). Because lookups involve expensive **Union queries** using primary and foreign keys, exceeding this limit can significantly slow down the database server.
+
+**Step 7: Observe Unique Permission Thresholds**
+Keep the **List Unique Permission Threshold** at or below 50,000. Validating unique permissions on a per-document basis is a resource-intensive query that can degrade performance if the limit is exceeded.
+
+**Step 8: Monitor HTTP Request Throttling**
+Enable this job to monitor **Front-End server performance**. In the event of an overload, the system will automatically throttle or reject low-priority HTTP requests to keep the server stable.
+
+**Step 9: Optimize Log Retention Periods**
+Adjust the **Change Log** settings to delete entries after a specific period (default 120 days). Decreasing this value reduces the size of database **.ldf files** and optimizes resource utilization.
+
+**Step 10: Apply the "Decrease Only" Rule**
+Always prioritize **decreasing thresholds** to optimize performance. It is never recommended to increase these values beyond their defaults, as it can lead to extreme system instability under heavy loads.
+

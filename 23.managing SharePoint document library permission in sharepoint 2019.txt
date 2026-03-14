@@ -1,0 +1,32 @@
+ **managing SharePoint document library permissions**, here is the step-by-step guide for creating and securing departmental libraries, 
+
+
+**Step 1: Create Document Libraries with Short Names**
+Navigate to your site and add a new **Document Library app**. When creating it, provide a **short name without spaces** (e.g., "logisticsdepart"). This ensures your URL remains clean and manageable, as spaces in initial names create long, messy web addresses.
+
+**Step 2: Rename Libraries for Display**
+After the library is created, go into its **Settings** and change the name to a more descriptive display title (e.g., "Logistics Documents"). This updates what users see on the screen while preserving the clean URL created in Step 1.
+
+**Step 3: Adjust Site-Level Permissions**
+By default, users in a "Contribute" group can edit the actual website parts and layout. To prevent this, go to **Site permissions** and change the group's access from **"Contribute" to "Read"**. This ensures users can visit the site but cannot delete or modify the web portal itself.
+
+**Step 4: Break Permission Inheritance**
+Open the **Permissions** settings for a specific library (e.g., Logistics Documents). Click on **"Stop inheriting permissions"**. This allows you to define unique security rules for that specific library that are different from the main parent site.
+
+**Step 5: Assign Unique Departmental Access**
+Once inheritance is stopped, delete any unnecessary inherited users. Click **Grant Permissions** and add the specific department group (e.g., "Log Employee"). Assign them **"Contribute"** rights. This allows them to use the library like a shared folder where they can add, edit, or delete documents.
+
+**Step 6: Repeat for Other Departments**
+Perform the same steps for other libraries (e.g., Supply Chain Documents). Break inheritance and assign "Contribute" rights only to the corresponding user group (e.g., "Supply Chain Department"). This creates "silos" where each team only sees their own files.
+
+**Step 7: Configure Navigation Links**
+Copy the URL for each document library and add it to the site's **Navigation menu**. Create clear labels like "Logistics Documents" and "Supply Chain Documents" to help users find their destinations quickly.
+
+**Step 8: Grant Global Read Access to the Portal**
+To ensure users can see the homepage and the navigation links, you must grant all departmental groups **"Read"** permission at the **Site Collection level**. Without this, users may be blocked from even reaching the main landing page.
+
+**Step 9: Test User Access**
+Log in as a specific user (e.g., Logistics Manager) to verify the settings. The user should only see their own department's links. If they try to manually enter the URL of another department's library, SharePoint will block them with a message stating, **"This site hasn't been shared with you"**.
+
+**Step 10: Verify "Contribute" vs. "Read" Functionality**
+Ensure that within their own library, the users can upload and edit files, but on the main site pages, they cannot see the "Edit" button for web parts. This keeps your portal design secure while allowing for efficient document management.

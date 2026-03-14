@@ -1,0 +1,37 @@
+ **troubleshooting SharePoint using logs and correlation IDs**, here is the step-by-step guide on how to locate and analyze errors, 
+
+
+
+**Step 1: Identify the Error Message**
+When interacting with SharePoint, you may encounter a "Something went wrong" error message. **Note the exact date, time (including seconds), and the unique ID** (Correlation ID) provided in the message for troubleshooting purposes.
+
+**Step 2: Navigate to the Log File Location**
+Open your server's file explorer and follow this specific path: **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions**. 
+
+**Step 3: Select the Version Folder**
+Inside the Web Server Extensions folder, look for a folder named **"15" or "16"**, depending on your specific SharePoint configuration.
+
+**Step 4: Open the LOGS Folder**
+Open the **"LOGS"** folder. Here, you will find all the application server logs saved with their corresponding date and time.
+
+**Step 5: Open the Latest Log File**
+To view the logs, it is recommended to use **Notepad++** for better formatting, though standard Notepad also works. Open the file that matches the time the error occurred.
+
+**Step 6: Analyze the Log Structure**
+Look at the columns in the log file, which include:
+*   **Time and Date**: When the event happened.
+*   **Service**: The specific service executing the task (e.g., SharePoint Foundation).
+*   **Category and Event ID**: The technical classification of the event.
+*   **Message**: The detailed description used to diagnose and rectify the issue.
+
+**Step 7: Check Front-End Server Logs**
+If the issue is related to user interactions or specific services like **Distributed Cache**, navigate to the same folder path on your **Front-End Server**. These logs show activities related to user requests and initialization processes.
+
+**Step 8: Investigate Specific Services**
+Use the logs to "dig into" what SharePoint is doing internally. You can explore processes related to the **Config DB**, **Upgrade logs**, or **Distributed Cache** to see which service is calling which activity.
+
+**Step 9: Search by Correlation ID**
+To find the exact cause of your error, use the **Find** feature in your text editor to search for the **unique ID** you noted in Step 1. This will lead you directly to the technical details of the failure.
+
+**Step 10: Rectify the Issue**
+Use the information found in the **"Message"** field to understand the root cause and take the necessary steps to fix the configuration or service error.

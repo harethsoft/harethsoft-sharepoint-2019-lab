@@ -1,0 +1,23 @@
+ here is the step-by-step guide on how to delete unused or faulty SharePoint service application pools using the Management Shell,
+
+
+**Step 1: Understand the Problem**
+When a service application (like Search or Visio Graphics) fails during configuration or is deleted through the user interface, the **application pools** associated with it often remain in SharePoint's memory. These redundant pools are unutilized and should be removed to keep the backend clean.
+
+**Step 2: Launch SharePoint Management Shell**
+Since these pools often persist even after the service is deleted from the UI, you must use the command line. Open the **SharePoint Management Shell** and ensure you **Run as administrator**.
+
+**Step 3: List Existing Application Pools**
+To see all the pools currently in your environment, type the command `Get-SPServiceApplicationPool`. This will provide a list of all application pools, allowing you to identify the redundant or misconfigured ones.
+
+**Step 4: Identify the Target Pool Identity**
+Find the specific name or **identity** of the pool you want to delete (for example, "hltf tech search query pool"). You will need this exact identity for the removal command.
+
+**Step 5: Execute the Removal Command**
+Use the command `Remove-SPServiceApplicationPool` followed by the identity of the pool. For example: `Remove-SPServiceApplicationPool -Identity "PoolName"`.
+
+**Step 6: Confirm Deletion**
+After running the command, the specified application pool will be deleted from the SharePoint backend.
+
+**Step 7: Verify the Cleanup**
+To confirm the pool has been successfully removed, run the `Get-SPServiceApplicationPool` command again. You can also refresh your SharePoint administration view to verify that the unnecessary pool is no longer appearing.

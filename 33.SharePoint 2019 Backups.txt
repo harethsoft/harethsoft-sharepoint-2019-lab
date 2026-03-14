@@ -1,0 +1,33 @@
+ **SharePoint 2019 Backups**, here is the guide for understanding the different levels of data protection, 
+
+
+**Step 1: Identify the Three Primary Backup Types**
+SharePoint on-premise provides three distinct levels of backups: **Farm level**, **Site Collection level**, and **List level**, each serving a different scope of data protection.
+
+**Step 2: Configure Farm Level Backups**
+A **Farm level backup** is the most comprehensive type, capturing a complete snapshot of all SharePoint settings, services, and content databases.
+
+**Step 3: Prepare for Disaster Recovery**
+The primary purpose of a farm level backup is to restore the **entire environment** in the event that the complete farm crashes or becomes corrupt.
+
+**Step 4: Save Farm Backups to a Secure Location**
+Ensure that your farm level backups are saved at a **specified, secure location** so they are accessible when a full system restoration is required.
+
+**Step 5: Implement Site Collection Backups**
+A **Site Collection backup** is configured at the individual site level. This is necessary because web applications consist of multiple site collections that may require separate protection.
+
+**Step 6: Capture Site-Specific Data and Settings**
+This backup type includes all **documents** within the site collection, along with its unique **security and configuration settings**.
+
+**Step 7: Restore Site Collections via Management Shell**
+To restore a site collection from a backup, administrators use **simple commands** within the **SharePoint Management Shell**.
+
+**Step 8: Utilize List Level Backups**
+The third type is the **List level backup**, which targets specific applications installed within a site collection, such as **document libraries or lists**.
+
+**Step 9: Perform Granular Restorations**
+List level backups are ideal when you only need to recover a **single library or list** rather than an entire site or farm, saving time and resources.
+
+**Step 10: Plan for Practical Demonstrations**
+Effective administration involves not just understanding these types but also viewing **practical demonstrations** to see exactly how each backup and restore process is executed.
+

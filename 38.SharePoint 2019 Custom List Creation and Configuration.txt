@@ -1,0 +1,34 @@
+**SharePoint 2019 Custom List Creation and Configuration**
+
+ **creating and customizing SharePoint lists**, here is the step-by-step guide for building a structured record system, 
+
+**Step 1: Understand the Role of Custom Lists**
+Recognize that after document libraries, **custom lists** are the most commonly used out-of-the-box application in SharePoint 2019. They are used to store structured data and records rather than just files.
+
+**Step 2: Create the Custom List App**
+Navigate to **Site Contents**, click **New**, and select **App**. From the available list, choose **Custom List** to begin the creation process.
+
+**Step 3: Use a Short Name for the URL**
+When naming the list initially, provide a **very short name** without spaces (e.g., "EMP record"). This ensures the generated **access URL** remains clean and manageable.
+
+**Step 4: Rename the List for Display**
+Once the list is created, go into the **List settings** and change the name to a proper title (e.g., "Employee Record"). This updates the display name for users while preserving the short URL established in the previous step.
+
+**Step 5: Configure Navigation Links**
+Copy the list's URL and add it to the **left navigation pane**. Assign a clear display name so users can quickly navigate to the list from anywhere within the site collection.
+
+**Step 6: Manage Default Columns and Views**
+By default, SharePoint creates a "Title" column and others like "Attachments". You can go to **Edit Current View** to hide or show specific default columns based on your project requirements.
+
+**Step 7: Add Choice Columns for Data Standardization**
+Create a **Choice column** (e.g., "Prefix") for data like "Mr.", "Mrs.", or "Miss". Use a **drop-down menu** for single selections or radio buttons/checkboxes when multiple options are needed.
+
+**Step 8: Implement Date and Currency Fields**
+Add a **Date and Time column** for information like Date of Birth, setting it to "Date Only". For financial data, use a **Currency column** (e.g., "Pay Scale") where you can define minimum and maximum value limits to prevent data entry errors.
+
+**Step 9: Set Up Person or Group Columns**
+Use the **Person or Group column** to link records to specific user IDs from your active directory. You can enforce **unique values**, which requires the column to be indexed to prevent duplicate entries for specific fields.
+
+**Step 10: Utilize Different Data Entry Methods**
+You can add records using the standard **New Form** or use the **Quick Edit** feature. Quick Edit allows you to add multiple records simultaneously in a format similar to working in an **Excel file**.
+

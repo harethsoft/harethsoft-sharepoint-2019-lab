@@ -1,0 +1,33 @@
+ **Modern vs. Classic Document Library Views** in SharePoint 2019, here is the step-by-step guide on their differences and features, 
+
+
+
+**Step 1: Understand the Evolution of Views**
+Recognize that SharePoint 2019 introduces **Modern Views**, which are designed to be more user-friendly and interactive than the **Classic Views** standard in SharePoint 2013 and older versions.
+
+**Step 2: Choose Your Visual Layout**
+In Modern View, you can dynamically switch between different display types: **List, Compact List, and Tiles**. The Tiles view is especially helpful because it displays **indicative symbols** for file types, such as icons for PowerPoint, Notepad, or Images.
+
+**Step 3: Pin Important Documents**
+Use the **"Pin to top"** feature for your most frequently accessed or important documents. This keeps them at the very top of the library for all users to see immediately.
+
+**Step 4: Use Dynamic Sharing**
+In the Modern interface, simply **hover your mouse** over any record to reveal a quick sharing icon. This allows you to instantly send a document and a message to another user (like a manager) via email.
+
+**Step 5: Manage Columns Instantly**
+Add, show, or hide columns directly from the library interface without needing to go deep into the settings menus. This allows for a more customized view of your data on the fly.
+
+**Step 6: Locate the Search Box**
+Note that the **search box** in Modern views is conveniently placed at the top of the library. In Classic sites, this search box was located in a different, less intuitive position.
+
+**Step 7: Access Library Settings Easily**
+In Modern View, you can quickly access **Library Settings** to modify your environment. In Classic View, this option is hidden, requiring you to click the gear icon and navigate through additional menus.
+
+**Step 8: Identify Classic View Limitations**
+Be aware that **Classic Views** use smaller icons and do not support dynamic hover actions. Sharing a document in Classic View requires **additional clicks** and is generally less user-interactive.
+
+**Step 9: Toggle Between Experiences**
+If your team is more comfortable with the older layout, you can switch. Go to **Advanced settings** and change the experience setting to **Classic**. Microsoft supports both in SharePoint 2019, though they continue to improve the Modern interface for better performance.
+
+**Step 10: Prioritize User Comfort**
+When designing your library, aim for the **Modern experience** if the goal is an impressive, user-friendly interface that makes users feel comfortable during their daily interactions.

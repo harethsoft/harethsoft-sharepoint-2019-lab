@@ -1,0 +1,35 @@
+**SharePoint 2019 Multiple Lines of Text with Append Changes**
+
+ configuring logging fields, here is the step-by-step guide for creating a column that tracks historical entries with timestamps, 
+
+
+**Step 1: Understand the Logging Purpose**
+Recognize that the **Multiple lines of text** field with **"append changes"** is specifically designed for environments where you need to log entries while automatically tracking the user identity and the exact date and time of each entry.
+
+**Step 2: Verify Versioning Requirements**
+Before creating the column, you must ensure that **versioning is enabled** for the list. The "append changes" feature will not function correctly if the list is not set to keep previous versions.
+
+**Step 3: Access Versioning Settings**
+Navigate to the **List Settings** and select **Versioning settings**. Choose the option to **create a version each time** an item is edited to ensure a full history is maintained.
+
+**Step 4: Create the Logging Column**
+Under the list settings, click on **"Create column"**. Provide a descriptive name, such as **"Logging"** or "Comments".
+
+**Step 5: Select the Correct Data Type**
+Choose **Multiple lines of text** as the data type. This is the only column type that supports the "append changes" functionality.
+
+**Step 6: Activate Append Changes**
+In the column configuration options, find the setting **"Append Changes to Existing Text"** and select **Yes**. Click **OK** to save and create the column.
+
+**Step 7: Perform an Initial Entry**
+Test the column by editing a list item and entering text into the new logging field. After saving, the entry will be displayed with a **read-only timestamp** and your username.
+
+**Step 8: Manage User Permissions**
+Ensure that other users who need to add logs have at least **Contribute permissions**. This allows them to edit the list item and append their own notes to the existing history.
+
+**Step 9: Append New Data from Different Users**
+When a second user edits the same item, they will see previous entries in a read-only format. They can add their own text, which will also be converted into a read-only log with their specific **user and date timestamp** upon saving.
+
+**Step 10: Review the Complete History**
+View the list item to see the full **audit trail**. Each entry is properly logged and stamped, providing a transparent history of all updates made to that specific field over time.
+

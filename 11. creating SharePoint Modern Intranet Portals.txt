@@ -1,0 +1,37 @@
+ creating **SharePoint Modern Intranet Portals**, here is the step-by-step guide on how to build a professional company website with multiple department sites,
+
+
+**Step 1: Create the Web Application**
+Open SharePoint Central Administration and go to **Manage web applications**. Create a new web application and give it a name representing your organization (e.g., "hltf tech company"). This creates the database and the container for your site.
+
+**Step 2: Configure DNS Settings**
+To ensure the website is accessible via its domain name within your environment, go to your **DNS Manager**. Create a new **Forward Lookup Zone** and add a record that points your site’s domain name to the server's IP address.
+
+**Step 3: Create the Main Site Collection**
+Navigate to **Application Management** and select **Create site collections**. Choose the **Communication site** template for your main homepage, as it is designed to engage users and publish topics effectively. Assign a primary and secondary administrator.
+
+**Step 4: Create Department Sites (Sub-collections)**
+Create separate site collections for each department (e.g., HR, Finance, and Logistics) using the **Team site** template. Using consistent templates across departments ensures a uniform user experience.
+
+**Step 5: Create a Document Center**
+For centralized file management, create a site collection using the **Document Center** template. This provides a dedicated space where public or common documents are quickly accessible to all employees.
+
+**Step 6: Build Global Navigation**
+On the main homepage, click **Edit** on the navigation menu. Add new links by pasting the URLs of the department sites (HR, Finance, etc.) and the Document Center. This allows users to move between departments with just one click.
+
+**Step 7: Customize Department Branding**
+Visit each department site and go to **Site information** to update the display name (e.g., "Human Resource Department"). Use the **Change the look** settings to apply different color themes (like purple for HR or green for Logistics) to give each department a unique identity.
+
+**Step 8: Add "Back to Home" Links**
+To improve usability, edit the navigation of every sub-site and add a link named **"Home Page"** that points back to the main company portal. This prevents users from getting "lost" in a sub-site.
+
+**Step 9: Configure the Hero Web Part**
+On your main portal page, add a **Hero web part** to make the layout dynamic and professional. Upload high-quality, attractive images for each tile and **link them** to the corresponding department sites so clicking the image redirects the user to that department.
+
+**Step 10: Enhance the Layout with Text and Events**
+*   **Text Web Part**: Add a welcome message, center it, and format it with colors to greet employees.
+*   **Events Web Part**: Add this to share the latest company events and news with the entire organization.
+*   **Divider**: Use the **Divider web part** to create clean partitions between different sections of your page.
+
+**Step 11: Finalize and Publish**
+Review your links and visual settings. Once satisfied, click **Publish** to make the intranet portal live for your organization.

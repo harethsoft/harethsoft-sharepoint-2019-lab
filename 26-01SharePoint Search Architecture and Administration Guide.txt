@@ -1,0 +1,245 @@
+
+
+## TITLE: SharePoint Search Architecture and Administration Guide
+
+============================================================
+PART 1: Search Service Application – Complete Overview
+======================================================
+
+1. What is the Search Service Application?
+
+The Search Service Application in Microsoft SharePoint is responsible for:
+
+* Crawling content
+* Indexing data
+* Processing search queries
+* Returning search results to users
+
+Without it, SharePoint search will not function.
+
+---
+
+2. How SharePoint Search Works (End-to-End Flow)
+
+---
+
+The search process consists of five major stages:
+
+A) Content Source
+Defines where content is collected from:
+
+* SharePoint Web Applications
+* File Shares
+* External systems
+
+B) Crawl Component
+Responsible for:
+
+* Visiting sites
+* Reading pages and documents
+* Extracting text from files (PDF, Word, Excel, etc.)
+
+Types of crawl:
+
+* Full Crawl (indexes everything)
+* Incremental Crawl (indexes changes only)
+* Continuous Crawl (runs automatically at intervals)
+
+C) Content Processing Component
+
+* Analyzes extracted text
+* Removes noise words
+* Classifies metadata
+
+D) Index Component
+
+* Stores processed data in the Search Index
+* This is the core performance element
+
+E) Query Processing Component
+When a user searches:
+
+* Receives the query
+* Searches inside the index
+* Returns ranked results
+
+---
+
+3. Search Databases (SQL Server)
+
+---
+
+Search uses the following databases:
+
+* Crawl Database
+* Analytics Database
+* Link Database
+
+All are hosted on Microsoft SQL Server.
+
+---
+
+4. Search Topology
+
+---
+
+In large environments, search roles can be distributed across multiple servers:
+
+Example:
+Server 1 – Crawl Component
+Server 2 – Index Component
+Server 3 – Query Component
+
+This is called Distributed Search Architecture.
+
+
+Crawl = Collect the data
+Index = Organize and store the data for fast search
+
+---
+
+5. Required Accounts
+
+---
+
+* Search Service Account
+* Crawl Account (must have read permission to content)
+
+---
+
+6. Common Search Issues
+
+---
+
+Problem: No search results
+Solution: Run Full Crawl
+
+Problem: PDF files not searchable
+Solution: Install PDF iFilter
+
+Problem: Access denied (0x80070005)
+Solution: Fix Crawl Account permissions
+
+Problem: Corrupted Index
+Solution: Perform Index Reset
+
+---
+
+7. Useful PowerShell Commands
+
+---
+
+Check Search Status:
+Get-SPEnterpriseSearchStatus
+
+List Content Sources:
+Get-SPEnterpriseSearchCrawlContentSource
+
+============================================================
+PART 2: Search Administration Menu – Detailed Explanation
+=========================================================
+
+---
+
+## SECTION 1: Diagnostics
+
+1. Crawl Log
+
+* Shows crawl success and failure
+* Displays permission errors
+* First place to check when search fails
+
+2. Crawl Health Reports
+
+* Performance statistics
+* Error summaries
+
+3. Query Health Reports
+
+* Query performance metrics
+* Detect slow search responses
+
+4. Usage Reports
+
+* Most searched keywords
+* User activity statistics
+
+---
+
+## SECTION 2: Crawling
+
+5. Content Sources
+   Defines what content gets indexed.
+
+6. Crawl Rules
+
+* Include or exclude paths
+* Assign different crawl accounts
+
+7. Server Name Mappings
+   Used with Load Balancers or Alternate Access Mappings.
+
+8. File Types
+   Defines which file extensions are indexed.
+   Example: PDF, DOCX, XLSX
+
+9. Index Reset
+   WARNING:
+   Deletes entire search index.
+   Requires Full Crawl afterward.
+   Used only when index is corrupted.
+
+10. Pause / Resume
+    Temporarily stops crawling.
+
+11. Crawler Impact Rules
+    Controls crawl speed and system load.
+
+---
+
+## SECTION 3: Queries and Results
+
+12. Authoritative Pages
+    Boosts specific pages to appear higher in results.
+
+13. Result Sources
+    Defines where results come from:
+
+* Local SharePoint
+* Remote SharePoint
+* Exchange
+* External search systems
+
+14. Query Rules
+    Custom logic for search behavior.
+    Example:
+    If user types "HR", redirect to HR homepage.
+
+15. Query Client Types
+    Defines search behavior for:
+
+* Browser
+* Mobile
+* Custom applications
+
+16. Search Schema
+    Advanced configuration area:
+
+* Managed Properties
+* Crawled Properties
+* Refiners
+
+Used to create filters like Department, Author, etc.
+
+17. Query Suggestions
+    Auto-complete suggestions while typing.
+
+18. Search Dictionaries
+    Defines synonyms.
+    Example:
+    HR = Human Resources
+
+19. Search Result Removal
+    Removes specific content from appearing in search results.
+
+============================================================

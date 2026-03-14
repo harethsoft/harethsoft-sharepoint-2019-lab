@@ -1,0 +1,34 @@
+ **SharePoint Modern Document Library Views**, here is the step-by-step guide on how to create and manage private and public views,
+
+
+**Step 1: Access Your Document Library**
+Open your SharePoint 2019 modern site and navigate to the document library where you want to manage information.
+
+**Step 2: Explore Default Visual Styles**
+Before creating a custom view, try the built-in layouts. You can switch between **List**, **Compact List**, and **Tiles**. The Tiles view is particularly helpful as it provides icons or short images to help you quickly recognize file types like PowerPoint, Excel, or Notepad.
+
+**Step 3: Initiate a New Custom View**
+Because having too many columns in one view is not user-friendly, click on the view menu and select **Save view as**.
+
+**Step 4: Name the View and Set Privacy**
+Enter a name for your view. **Best Practice:** Use a short name with **camel case** (e.g., "DocumentSizeView") instead of spaces. Decide the visibility:
+*   **Public View**: Keep the "Make this a public view" box **checked** so all users with access to the library can see it.
+*   **Private View**: **Uncheck** the box so the view is only visible to you.,
+
+**Step 5: Filter Columns in the View**
+Click on **Edit current view**. To keep the screen clean, **uncheck** all unwanted fields and **check** only the specific attributes you want to see for this view, such as "File Size" or "Document Type".,
+
+**Step 6: Apply Grouping for Better Organization**
+In the edit menu, scroll down to the **Group By** section. You can choose to group documents by a specific attribute, such as **"Created By"**. This will organize your files into expandable sections based on the author.,
+
+**Step 7: Save and Switch Between Views**
+Click **OK** to finalize your changes. You can now quickly switch between your new custom views (like a "File Type View" or "Size View") and the "All Documents" view to see different sets of information instantly.
+
+**Step 8: Verify Permission Impact**
+If a user only has **Read** permissions, they can view documents but not upload them. To allow users to contribute and see their own grouped content, an administrator must change their permission level to **Contribute**.
+
+**Step 9: Test Visibility with Different Users**
+Log in with a different account to verify your settings. You will notice that any **Public Views** you created are visible to everyone, but any **Private Views** are hidden from other users and only appear for the creator.
+
+**Step 10: Create Multiple Views for High Performance**
+Do not worry about the number of views you create. SharePoint does not restrict how many views you can have, and creating multiple views to handle hundreds of different fields **does not affect the site's performance**.,

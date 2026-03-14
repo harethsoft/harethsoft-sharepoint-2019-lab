@@ -1,0 +1,20 @@
+step-by-step guide on how to modify a SharePoint 2019 modern team site's name and logo. 
+
+
+**Step 1: Access Site Information**
+Open your SharePoint site and go to the **Site information** settings menu.
+
+**Step 2: Change the Site Name**
+In the **Site name** field, delete the default text (such as "home") and type in your desired name, for example, "harethsoft website".
+
+**Step 3: Update Site Description (Optional)**
+If you wish to provide more context for the site, you can modify the **Site description** field. In the demonstration, this was left as the default.
+
+**Step 4: Change the Site Logo (Optional)**
+To update the visual branding, you can change the **Site logo** by uploading a new image from your computer.
+
+**Step 5: Save Your Changes**
+Click the **Save** button. Once saved, the new site name and the new logo image will immediately appear on your site's front page.
+
+**Step 6: Apply to Other Areas**
+You can use this same simple method to change the front page name for any other site or subsite within your SharePoint environment.

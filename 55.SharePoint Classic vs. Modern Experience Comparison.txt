@@ -1,0 +1,32 @@
+**SharePoint Classic vs. Modern Experience Comparison**
+
+**Step 1: Identify the Version Evolution**
+Recognize that while versions like 2013 and 2016 primarily offered the **Classic experience**, SharePoint 2019 and Server Subscription Edition 2022 introduced the **Modern interface** for enhanced usability.
+
+**Step 2: Evaluate Navigation Bar Layout**
+Observe the differences in the **left navigation bar**; the Modern interface features **proper partitions** and a cleaner design, making it significantly more user-friendly than the less-organized Classic view.
+
+**Step 3: Streamline Link Management**
+Utilize the easy **"+" button** in Modern sites to add navigation links directly, whereas the Classic experience requires a **pop-up window** where you must manually specify display text and addresses.
+
+**Step 4: Locate the Search Facility**
+Note the change in search bar placement; in the Modern experience, the **search facility** is located at the **top right corner**, whereas in the Classic team site, it is found at the **top left**.
+
+**Step 5: Transition to Hero Web Parts**
+Upgrade from standard Classic web parts to the **Modern "Hero" web part**, which is highly **dynamic** and allows you to showcase multiple images and content tiles in a visually appealing layout.
+
+**Step 6: Simplify Page Customization**
+Switch to the Modern site's **user-friendly editing** mode to add text, images, and file viewers simply, avoiding the formal **"edit page" mode** in Classic that is more difficult to customize.
+
+**Step 7: Optimize Document Library Views**
+Compare the document library interfaces; the **Modern view** provides **better controls** for uploading files and a more intuitive layout compared to the rigid and less user-friendly Classic document view.
+
+**Step 8: Leverage Change Tracking and Filtering**
+Use the Modern document library to **filter items** easily and see **event history** in simple ways, features that are not as accessible or transparent in the Classic experience.
+
+**Step 9: Accelerate App Integration**
+Add new apps like document libraries or custom lists in the Modern experience with a **simple direct click**, while the Classic experience requires navigating through **"Site Contents"** to add an app.
+
+**Step 10: Enforce Permission-Based Visibility**
+Understand that the **Edit bar** and customization options are **only visible to users** with edit permissions; users with only view permissions will not see these controls, ensuring site security.
+

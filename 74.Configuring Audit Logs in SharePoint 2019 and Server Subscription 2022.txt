@@ -1,0 +1,33 @@
+**Configuring Audit Logs in SharePoint 2019 and Server Subscription 2022**
+
+ configuration of audit logs for tracing user and administrator activities, here is the exhaustive step-by-step guide, 
+**Step 1: Identify the Auditing Objective**
+Recognize that **Audit logs** are critical for tracking changes made by various users or administrators across your SharePoint sites, document libraries, and custom lists.
+
+**Step 2: Monitor Critical Document Activities**
+Use auditing to keep a record of whenever users are **editing, deleting, adding, or updating** documents and components within a site collection.
+
+**Step 3: Access Site Collection Audit Settings**
+Navigate to the **"Site information"** menu, select **"View all site settings,"** and locate the **"Site collection audit settings"** under the Site Collection Administration section.
+
+**Step 4: Define the Data Retention Period**
+Specify how many days to retain audit data; if left blank, the system defaults to **90 days**, though you can adjust this based on your organization's storage requirements.
+
+**Step 5: Calculate Database Storage Impact**
+Understand that enabling audits creates a connection with the **WSS_Logging database**; a longer retention period will lead to significantly **huge storage requirements** for your database server.
+
+**Step 6: Create a Dedicated Secure Library**
+Create a new **document library** (e.g., "Audit logs") specifically to store the generated log files in a location that is logically separated from general user content.
+
+**Step 7: Enforce Restricted Admin Permissions**
+Ensure the audit library is accessible only to authorized personnel by **stopping permission inheritance** and granting "Full Control" only to specific administrators (e.g., sp19 admin).
+
+**Step 8: Select Specific User Event Triggers**
+Configure the system to log specific events, such as when a user **edits items, checks out/in files, moves or copies items**, or performs a **delete/restore** action.
+
+**Step 9: Enable Administrative Activity Tracking**
+Set the audit to also track high-level administrative tasks, including **changing content types**, modifying list/library design elements, or **editing user permissions**.
+
+**Step 10: Utilize Logs for Historical Tracing**
+Once enabled, use the logs saved in your designated library to **monitor activities or trace specific events** that may require investigation at a later date.
+

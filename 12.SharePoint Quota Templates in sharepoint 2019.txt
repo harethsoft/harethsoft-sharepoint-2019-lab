@@ -1,0 +1,29 @@
+ **SharePoint Quota Templates**, here is the step-by-step guide on how to define and manage storage limits for your site collections, 
+
+
+**Step 1: Understand the Business Scenario**
+Recognize the need to restrict storage for different departments (e.g., HR, Finance, Logistics) to ensure no single site collection consumes too much server space. For example, you may want to limit each department to **10 GB** of data.
+
+**Step 2: Access Quota Management**
+Open **SharePoint Central Administration**, navigate to **Application Management**, and look for the sections related to site collection quotas.
+
+**Step 3: Define a New Quota Template**
+Before applying limits, you must create a template. Click on **Specify quota templates**, choose to create a new one, and give it a clear name like **"10 GB Policy"**.
+
+**Step 4: Configure Storage Values**
+Set the **maximum storage limit** in MB. Since SharePoint uses MB, you must calculate the value (e.g., approximately 10,240 MB for 10 GB). You can also configure a **warning email** to be sent to the administrator when the site reaches a specific threshold (e.g., 9 GB).
+
+**Step 5: Save the Template**
+Click **OK** to save the template. This template is now a reusable policy that can be applied to any site collection within your web application.
+
+**Step 6: Associate the Quota with a Site**
+Go to **Application Management** and click on **Configure quotas and locks**. Select the specific **Site Collection** you want to restrict (for example, the Finance department site).
+
+**Step 7: Apply the Policy**
+In the **Site Quota Information** section, change the selection to your newly created **"10 GB Policy"** from the dropdown menu and click **OK**.
+
+**Step 8: Repeat for Other Site Collections**
+Repeat the association process for each department site (HR, Logistics, etc.). You can use the same **10 GB template** for all of them or create different templates if some departments require more or less space.
+
+**Step 9: Monitor and Restrict**
+Once applied, users in those site collections will be automatically restricted from uploading more data once they reach their defined limit, helping you manage your overall infrastructure storage effectively.

@@ -1,0 +1,25 @@
+ here is the step-by-step guide on how to manage and assign permissions, 
+
+**Step 1: Access Site Settings and Permissions**
+Navigate to your SharePoint site, click on **Site information**, and then select **View all site settings**. From the settings page, click on **Site permissions** to see the groups associated with your site.
+
+**Step 2: Understand the Default Groups**
+By default, SharePoint creates three primary groups based on your site's title (e.g., Home Owners, Home Members, and Home Visitors). 
+*   **Owners**: Have **Full Control** over the entire site collection.
+*   **Members**: Have **Edit** rights, allowing them to add or modify content.
+*   **Visitors**: Have **Read** access only, meaning they can view content but cannot change anything.
+
+**Step 3: Review or Create Permission Levels (Optional)**
+You can inspect what each permission level allows by clicking on **Permission levels**. While it is recommended not to change default levels, you can click **Add a permission level** to create a custom one (e.g., "test") and manually check boxes for specific list, site, or personal permissions.
+
+**Step 4: Assign Active Directory Users to Groups**
+To give a user access, select the appropriate group (like **Home members**) and click **New** to add/assign a user. Search for the user from your **Active Directory** (for example, "HR Manager") and save the changes to grant them the permissions associated with that group.
+
+**Step 5: Verify Edit Permissions**
+When a user with **Edit** rights (like the HR Manager) logs in, they will see an **Edit** button on the page and can access **Site contents** to add document libraries, pages, or apps. However, their access to global site settings remains limited compared to a site administrator.
+
+**Step 6: Verify Read-Only Permissions**
+When a user with **Read** rights (like the HR Deputy Manager) logs in, they will **not** see the Edit button. In the document libraries, they will not have options to upload or change files. They can view pages and information but cannot modify the navigation or site structure.
+
+**Step 7: Finalize and Refine**
+You can further refine these rights at any time by moving users between groups or defining more specific permission levels to ensure users can only "play within their defined territory".

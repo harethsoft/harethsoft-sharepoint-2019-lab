@@ -1,0 +1,35 @@
+**Understanding and Implementing Caches in SharePoint On-Premise**
+
+cache types and their configurations, here is the step-by-step guide for optimizing system performance and reducing database load,
+
+
+**Step 1: Identify the Primary Goal of Caching**
+Recognize that the fundamental purpose of implementing caches in a SharePoint environment is to **increase system performance** and significantly **reduce the query load** on the main database (SQL) server.
+
+**Step 2: Distinguish the Four Cache Types**
+Understand that SharePoint utilizes four distinct types of caches working at different levels: **BLOB cache, Page output cache, Object cache, and Anonymous search result cache**.
+
+**Step 3: Configure BLOB (Binary Large Object) Cache**
+Use the **BLOB cache** to store large files such as **images, audios, videos, CSS, and JavaScript** files on the local disk of the Web Front End (WFE) server rather than retrieving them from the database for every call.
+
+**Step 4: Enable BLOB Cache via Web.Config**
+Note that BLOB cache is **off by default**; you must manually enable it by changing the state from "off" to "on" within the **web.config file** of your web application.
+
+**Step 5: Manage BLOB Cache Size and Storage**
+The default size for the disk-based BLOB cache is **10 GB**, though this can be modified based on your storage capacity and the volume of media files in your site.
+
+**Step 6: Implement Page Output Cache**
+Enable the **Page output cache** to store the **rendered output of a page**, including different versions of the page based on the specific permissions of the users requesting it.
+
+**Step 7: Assign Page Output Cache Levels**
+Configure the settings for page output caching at various levels depending on your needs, including the **site collection level, the site level, or specific page layouts**.
+
+**Step 8: Optimize the Memory-Based Object Cache**
+Utilize the **Object cache** to store items like **lists, libraries, site settings, and page layouts** directly in the **memory (RAM)** of the WFE servers to reduce traffic between the web server and SQL.
+
+**Step 9: Tailor Anonymous Search Result Cache**
+If you are using the **publishing site feature**, activate the **Anonymous search result cache** to save and reuse search results for anonymous users, which improves the performance of the **content search web part**.
+
+**Step 10: Synchronize Caches Across Load Balancers**
+In environments with multiple WFE servers and a **load balancer**, ensure that the BLOB cache is **enabled on each individual front-end server** to maintain consistent performance for all users.
+

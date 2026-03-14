@@ -1,0 +1,35 @@
+**Storage Metrics Analysis in SharePoint 2019 and 2022 Modern Sites**
+
+ storage metrics in modern site collections, here is the exhaustive step-by-step guide for analyzing data storage behavior,
+
+
+**Step 1: Acknowledge the Necessity of Monitoring**
+Recognize that monitoring **Storage Metrics** is a mandatory administrative task to understand exactly how much data is being stored within specific document libraries and site contents.
+
+**Step 2: Understand the Impact on Large Organizations**
+In environments with **thousands of document libraries**, use the storage metrics tool as a critical component for the high-level analysis of data storage behavior and organizational storage trends.
+
+**Step 3: Access the Site Information Menu**
+Begin the analysis process by navigating to the **"Site Information"** menu within your modern SharePoint site collection.
+
+**Step 4: Navigate to Global Site Settings**
+From the site information panel, select the option to **"View all site settings"** to open the full array of administrative configurations.
+
+**Step 5: Locate the Site Collection Administration Section**
+Scroll through the site settings page until you reach the **"Site Collection Administration"** heading, where the storage metrics tool is located.
+
+**Step 6: Launch the Storage Metrics Tool**
+Click on the **"Storage Metrics"** link to generate a comprehensive report showing the data distribution across your site in a sorted list.
+
+**Step 7: Customize Data Sorting and View**
+Adjust the sorting of the data based on your specific needs, such as sorting by **actual size or the modification date** to find the largest or most recent files.
+
+**Step 8: Analyze Visual Storage Graphs**
+Review the **horizontal graphs** provided for each folder or library; these show the percentage of total storage (e.g., 97.4%) each item occupies, providing an immediate visual summary of storage consumption.
+
+**Step 9: Dig Deeper into Content Hierarchies**
+Interact with the report by clicking on a library or folder to **"dig into"** the content, allowing you to explore sub-folders and see how data is distributed at lower levels.
+
+**Step 10: Identify Specific Large Files**
+Continue drilling down until you reach the file level to identify exactly which items, such as **large MP4 video files**, are occupying the most storage space (e.g., 28.9 MB).
+

@@ -1,0 +1,90 @@
+**SharePoint On-Premise Architecture and Collaboration Fundamentals**
+
+concepts of SharePoint, here is the step-by-step guide to understanding the architecture and collaboration features,
+
+**Step 1: Define SharePoint as a Collaboration Platform**
+Understand that SharePoint is a web-based platform designed for team collaboration, allowing members to share **documents, media (videos), news, and announcements** effectively.
+
+**Step 2: Utilize Out-of-the-Box Document Management**
+Leverage built-in applications like **document libraries** which offer essential features such as **version control** and Information Rights Management (IRM) to control access.
+
+**Step 3: Enable Simultaneous Co-authoring**
+Take advantage of **co-authoring**, where multiple team members (e.g., from HR, Finance, and Logistics) can work on a **single presentation or document simultaneously** without creating multiple copies.
+
+**Step 4: Establish the Domain Foundation**
+Recognize that an on-premise deployment requires a **Domain Controller** with an active directory, DNS, and organizational units (OUs) to validate and manage user rights.
+
+**Step 5: Configure the Database (DB) Server**
+Set up a dedicated **SQL Server**; it is critical to know that SharePoint **does not save data within itself** but stores everything—including websites—in its DB server.
+
+**Step 6: Distribute Backend Tasks to the App Server**
+Assign the **Application Server** role to handle backend queries, service configurations, and **timer jobs** necessary for system health and service maintenance.
+
+**Step 7: Direct Traffic to the Web Front-End (WFE)**
+Deploy a **Web Front-End (WFE)** server hosted on IIS to receive all incoming **client requests and user traffic**, which it then processes by communicating with the DB server.
+
+**Step 8: Scale Architecture Based on User Load**
+While a single-server setup works for testing, larger organizations (500 to 1,000 users) must **separate these roles** into different physical or virtual servers to handle the load.
+
+**Step 9: Implement Advanced Services for Large Environments**
+In very large organizations (1,000+ users), add dedicated **Search servers** for data crawling and **Distributed Cache servers** to optimize performance.
+
+**Step 10: Ensure High Availability through Fault Tolerance**
+For high-importance data, create a **Fault Tolerance side** by clustering SQL servers with live synchronization, ensuring that if the primary site fails, the secondary site remains active for users.
+
+
+**Comprehensive Guide to SharePoint 2019 Architecture and Fault Tolerance**
+
+SharePoint is a web-based collaboration platform designed for document management, co-authoring, and information sharing. Its architecture is built on a modular system of server roles and redundancy strategies to ensure high performance and reliability.
+
+### **I. SharePoint Server Architecture and Roles**
+
+The SharePoint on-premise architecture is typically structured in a **three-tier model** comprising Web, Application, and Database layers.
+
+**1. Web Front-End (WFE) Server Role**
+*   The WFE server acts as the primary entry point for all user traffic and client requests.
+*   It is hosted on **Internet Information Services (IIS)** and handles the rendering of web pages.
+*   All requests processed by the WFE are validated through a **Domain Controller** to check user rights and Active Directory permissions.
+
+**2. Application (App) Server Role**
+*   The Application server is optimized for high throughput and is responsible for back-end queries.
+*   It executes **Timer Jobs**, which are essential for checking system health and maintaining service configurations.
+*   In modern MinRole topologies, the App server can also serve as the target for search crawl requests.
+
+**3. Database (DB) Server Role**
+*   SharePoint **does not save any data within itself**; it stores all websites, settings, and content in a dedicated SQL Server.
+*   This tier hosts various databases, including configuration databases, content databases, and service application databases.
+
+**4. Search Server Role**
+*   Specifically used in large organizations, the Search server is responsible for **crawling** and indexing SharePoint data.
+*   It includes components like the crawl component, which retrieves metadata, and the content processing component, which parses documents for the index.
+
+**5. Distributed Cache Server Role**
+*   This role provides **in-memory caching** for features like newsfeeds, authentication, and security trimming.
+*   It improves page load performance by enabling web applications to retrieve data quickly without a direct dependency on SQL databases.
+*   For optimal performance, it is recommended to run this in **Dedicated Mode**, where other services on the server are stopped.
+
+---
+
+### **II. Detailed Explanation of Fault Tolerance**
+
+**1. Foundational Concepts**
+*   **Fault tolerance** is the ability of a system to contain the propagation of faults and continue performing its specified tasks despite hardware or software failures.
+*   The ultimate goal is to prevent **system failures**, which occur when an error (the manifestation of a fault) causes the system to perform incorrectly.
+
+**2. Redundancy Techniques**
+*   **Hardware Redundancy:** Involves physical replication, such as **Triple Modular Redundancy (TMR)**, where three modules perform the same task and a majority vote determines the output.
+*   **Passive vs. Active Redundancy:** Passive techniques use fault masking to hide faults (like voting logic), while active techniques achieve tolerance through **reconfiguration**, which detects and removes faulty components.
+*   **Information Redundancy:** Adds redundant data bits for error detection and correction, such as **Hamming codes** used in memory systems.
+
+**3. Fault Tolerance in SharePoint Environments**
+*   In large-scale SharePoint architectures, fault tolerance is achieved by creating a **secondary "Fault Tolerance side"** that mirrors the primary site.
+*   **SQL Clustering:** The system utilizes a cluster of SQL servers with **live synchronization** of databases.
+*   **Failover Mechanism:** If the primary database server fails or becomes inaccessible, the secondary server is automatically promoted to primary status.
+*   This ensures that users can continue accessing the WFE and their data without interruption, even if the entire primary infrastructure crashes.
+
+**4. Byzantine Fault Tolerance (BFT)**
+*   BFT refers to a system's ability to withstand **rogue nodes** that may provide inaccurate data, fail to respond, or deliberately mislead other parts of the network.
+*   This is often managed through consensus algorithms where nodes must agree on a state before it is added to a ledger or finalized, ensuring the system remains robust even if a minority of components are malicious or faulty.
+
+

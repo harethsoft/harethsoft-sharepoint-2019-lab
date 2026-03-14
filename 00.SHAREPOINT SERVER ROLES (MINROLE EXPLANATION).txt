@@ -1,0 +1,201 @@
+
+
+SHAREPOINT SERVER ROLES (MINROLE EXPLANATION)
+
+This screen appears during SharePoint Server installation.
+It defines which services will run on the server and how the farm topology is designed.
+
+---
+
+1. MULTIPLE-SERVER FARM ROLES
+
+---
+
+These roles are used when you have more than one SharePoint server (Production environments).
+
+---
+
+1. FRONT-END ROLE
+
+---
+
+What it does:
+
+* Handles user HTTP/HTTPS requests
+* Serves SharePoint pages
+* Authenticates users
+* Communicates with Application servers
+* Does NOT process heavy background jobs
+
+Think of it as:
+The web layer that users directly connect to.
+
+When to use:
+
+* Many concurrent users
+* Production environments
+* When using Load Balancer
+* When separating web traffic from backend processing
+
+---
+
+2. APPLICATION ROLE
+
+---
+
+What it does:
+
+* Handles background processing
+* Runs Service Applications
+* Runs Timer Jobs
+* Manages Business Logic
+* Runs Excel Services
+* Runs Managed Metadata Service
+* Runs User Profile Service
+* Handles Workflow
+
+It does NOT directly serve user pages.
+
+Think of it as:
+The processing engine of SharePoint.
+
+When to use:
+
+* Medium and large farms
+* When separating processing from web traffic
+* When performance optimization is required
+
+---
+
+3. DISTRIBUTED CACHE ROLE
+
+---
+
+What it does:
+
+* Stores authentication tokens
+* Supports social features
+* Improves performance through caching
+* Manages user session data
+
+Think of it as:
+The memory acceleration layer of SharePoint.
+
+Important:
+
+* Requires high RAM
+* Sensitive to misconfiguration
+* Often dedicated in large farms
+
+When to use:
+
+* Large farms
+* Heavy user activity
+* Social features enabled
+* Performance tuning required
+
+---
+
+4. SEARCH ROLE
+
+---
+
+What it does:
+
+* Crawls content
+* Indexes content
+* Processes search queries
+* Performs search analytics
+
+Includes:
+
+* Crawl component
+* Index component
+* Query processing
+* Content processing
+
+Think of it as:
+The internal Google engine of SharePoint.
+
+When to use:
+
+* Enterprise search required
+* Large document libraries
+* Many site collections
+* High search traffic
+
+---
+
+5. CUSTOM ROLE
+
+---
+
+What it does:
+
+* Allows manual selection of services
+* Overrides automatic MinRole configuration
+
+Not recommended unless:
+
+* Advanced architecture required
+* Special scenarios
+* Migration from older farms
+
+When to use:
+
+* Legacy upgrades
+* Special topology requirements
+* Advanced performance tuning
+
+---
+
+2. SINGLE-SERVER FARM
+
+---
+
+6. SINGLE-SERVER FARM ROLE
+
+What it does:
+
+* Installs all services
+* Web + Application + Search + Distributed Cache
+* Everything runs on one server
+
+Designed for:
+
+* Development
+* Testing
+* Lab environments
+* Very small organizations
+
+Not recommended for:
+
+* Production
+* High availability
+* Large user base
+
+---
+
+## SUMMARY
+
+Front-end:
+Handles user web requests.
+
+Application:
+Handles background processing and service applications.
+
+Distributed Cache:
+Handles authentication tokens and caching.
+
+Search:
+Handles crawling and indexing.
+
+Custom:
+Manual configuration for advanced scenarios.
+
+Single-Server Farm:
+Everything on one server (Dev/Test only).
+
+---
+
+see also snapshoot 00.01,00.02,00.03

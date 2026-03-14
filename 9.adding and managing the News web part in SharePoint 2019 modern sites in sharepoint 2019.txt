@@ -1,0 +1,28 @@
+adding and managing the **News web part** in SharePoint 2019 modern sites, here is the step-by-step guide 
+
+**Step 1: Prepare the Home Page**
+Go to your SharePoint 2019 modern team site. Click the **Edit** button in the top right corner of the page to enter customization mode.
+
+**Step 2: Add the News Web Part**
+Click the **plus (+)** icon within a section to add a new web part. Search for and select the **News** web part. Once it appears on your grid, click **Publish** to save the layout (it will initially show no news until you create a post).
+
+**Step 3: Create a News Post**
+On the live home page, click the **+ Add** button within the News section. SharePoint will automatically create a **new page** for your announcement.
+
+**Step 4: Add Title and Visuals**
+Enter a **Title** for your news (such as "Party Plan" or "Submission Deadline"). You can click the **pencil icon** to upload a background image from your desktop or use a default one to make the post more engaging.
+
+**Step 5: Enter Detailed Information**
+Type your announcement details into the text area. You can also add **hyperlinks** to other SharePoint lists or external sites if you want users to take a specific action, such as registering for an event.
+
+**Step 6: Configure User Comments**
+Decide if you want to allow feedback. You can **enable or disable comments** for each specific news post. If enabled, any user comment will be logged with their user ID and a timestamp.
+
+**Step 7: Publish and Verify**
+Click **Publish** at the top of the news page. Return to the home page and refresh it; the new post should now appear at the top of the News section. All site users (such as your HR Manager) will now be able to see the latest update.
+
+**Step 8: Manage and Locate News Pages**
+Understand that every news post is stored as an **.aspx page**. You can find, edit, or delete these posts by navigating to **Site contents** and then opening the **Site Pages** library.
+
+**Step 9: Review Capacity**
+Note that the News web part typically displays about **five to six** news items on the front end, with the most recent posts appearing first, depending on your specific requirements and settings.

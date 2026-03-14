@@ -1,0 +1,34 @@
+**Overcoming SharePoint Lookup Limitations for Drop-Down Fields**
+
+ about bypassing lookup column limitations, here is the step-by-step guide for showing drop-down values in other lists, 
+
+**Step 1: Identify the SharePoint Limitation**
+Recognize that SharePoint has a specific limitation where **drop-down (Choice) fields** do not appear as selectable options when creating or modifying a lookup column in another list.
+
+**Step 2: Access the Source List Settings**
+Go to the **list settings** of the original list (the one containing the drop-down field) to begin creating a workaround that converts the data format.
+
+**Step 3: Create a New Helper Column**
+Click on **"Create column"** to add a helper field. This field will bridge the gap between the drop-down value and the lookup column requirements.
+
+**Step 4: Name the Helper Column**
+Give it a descriptive name, such as **"Prefix into Text,"** so you can easily identify its purpose later when configuring the lookup in the target list.
+
+**Step 5: Select the Calculated Data Type**
+Choose **"Calculated (calculation based on other columns)"** as the data type. This allows you to dynamically transform the value of the choice field.
+
+**Step 6: Enter the Conversion Formula**
+In the formula box, simply enter the reference to the drop-down field (e.g., **`=[Prefix]`**). This tells SharePoint to mirror the selected value from the drop-down.
+
+**Step 7: Set Output to Single Line of Text**
+Select **"Single line of text"** as the data type returned by this formula. This conversion is crucial because SharePoint lookups can easily read text fields even if they cannot read choice fields.
+
+**Step 8: Manage Column Visibility (Optional)**
+Since this calculated field is used for background processing, you may choose to **hide it** from the default view of your source list to avoid redundant data display.
+
+**Step 9: Update the Target Lookup Column**
+Navigate to the second list (the target list) and open the settings for your existing **Lookup column**.
+
+**Step 10: Select the Calculated Field for Display**
+Refresh the settings and you will now see the helper field (e.g., "Prefix into Text") available. **Check the box** next to it to allow the drop-down value to appear in your target list view.
+

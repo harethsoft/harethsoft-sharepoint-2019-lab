@@ -1,0 +1,32 @@
+**User Permissions in SharePoint 2019**, here is the step-by-step guide on how to create users, manage groups in Active Directory, and assign permissions, 
+
+
+**Step 1: Access Site Permission Settings**
+Log in to your SharePoint site with administrator credentials. Navigate to **Site information**, click **View all site settings**, and then select **Site permissions** under the "Users and Permissions" group.
+
+**Step 2: Create Departmental Users in Active Directory**
+Go to your **Domain Controller** and open **Active Directory Users and Computers**. Create new users for each department. For example, create "Log Manager" and "Deputy Log Manager" for Logistics, and similar accounts for HR and Finance.
+
+**Step 3: Create Security Groups in Active Directory**
+To simplify management, create a **Global Security Group** for each department, such as "HR Employees," "Finance Employees," and "Log Employees".
+
+**Step 4: Assign Users to Departmental Groups**
+Add the specific users you created to their corresponding departmental groups. For instance, add both the Log Manager and Deputy Log Manager to the **"Log Employees"** group.
+
+**Step 5: Create a Global Company Group**
+As a best practice, create one main group (e.g., **"hltf tech company groups"**) and add all the departmental groups (HR, Finance, Logistics) into this single main group. This allows you to manage site-wide access from one place.
+
+**Step 6: Grant Access to the Main Portal**
+Return to the SharePoint site's permission page. Use the **Grant Permissions** tool to search for your global group ("hltf tech company groups") and assign them the **"Read"** permission level. This ensures all employees can land on the main company homepage.
+
+**Step 7: Grant Unique Access to Departmental Sites**
+Navigate to each individual department site collection (e.g., the Human Resource site). Go to its **Site permissions** and grant the specific departmental group (e.g., "HR Employees") **Read** permissions. Repeat this for each department so they have access only to their own resources.
+
+**Step 8: Understand Permission Inheritance**
+Note that by default, sub-sites (like a Document Center) will **inherit** permissions from the main parent site. However, independent site collections require you to assign unique rights for each group.
+
+**Step 9: Test and Verify Permissions**
+Open a private browsing window and log in as a standard user (e.g., Deputy Log Manager). Verify that the **Edit** option is hidden and the user can only **Read** the content.
+
+**Step 10: Verify Restricted Areas**
+Ensure that the user can click on their own department link to access its resources, but if they try to click on a different department's link (like Finance), they should receive a message saying, **"This list hasn't been shared with you"**.

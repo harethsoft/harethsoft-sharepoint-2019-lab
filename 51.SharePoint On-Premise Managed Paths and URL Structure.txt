@@ -1,0 +1,34 @@
+**SharePoint On-Premise Managed Paths and URL Structure**
+
+ management and creation of managed paths, here is the step-by-step guide for organizing your site collection URLs,
+
+**Step 1: Understand the Role of Managed Paths**
+Recognize that **managed paths** are fixed segments that appear immediately after the web application address to complete the URL structure of a site collection.
+
+**Step 2: Identify Default SharePoint Paths**
+Acknowledge that SharePoint automatically provides two managed paths upon creation: the **root (/)** path and the **"sites"** path.
+
+**Step 3: Acknowledge the Root Path Limitation**
+Understand that you can only create **one single site collection** at the root path of a web application; as a general procedure, this is typically used for the organization's home page.
+
+**Step 4: Navigate to Managed Path Settings**
+In Central Administration, go to **Application Management**, select your target web application, and click on **Managed Paths** to view or modify your URL options.
+
+**Step 5: Define a Custom Prefix**
+Enter a new **prefix** based on your naming convention, such as "HR," "Finance," or "Logistics," to create dedicated organizational paths within your web application.
+
+**Step 6: Verify URL Availability**
+Use the **"Check URL"** feature to ensure the prefix you want to use is not already occupied; if it is already in use, the system will prevent you from recreating it.
+
+**Step 7: Select the Inclusion Type**
+Choose the appropriate type for your path: **wildcard inclusion** (allowing you to create multiple site collections under that path) or **explicit inclusion**.
+
+**Step 8: Add the Path to the Web Application**
+Once defined, **add the path** to the list of managed paths to finalize its registration within the SharePoint infrastructure.
+
+**Step 9: Utilize the Path during Site Creation**
+When creating a new **site collection**, you can now select your custom managed path from the dropdown menu, allowing you to assign a specific name after that fixed path.
+
+**Step 10: Improve Infrastructure Management**
+Use these paths to **well-define and manage** your sites across your web application, which leads to better overall management of your complete infrastructure.
+

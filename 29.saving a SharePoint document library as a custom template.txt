@@ -1,0 +1,35 @@
+**saving a SharePoint document library as a custom template**, here is the step-by-step guide for creating and reusing library designs, 
+
+
+**Step 1: Identify Your Model Library**
+Select an existing document library (e.g., Logistics Department) that you have already customized with specific columns, advanced settings, or designs to serve as your "model" for future libraries.
+
+**Step 2: Access Library Settings**
+Navigate to the chosen document library and click on **Library settings** to access the administration options for that specific list.
+
+**Step 3: Select the Save as Template Option**
+Locate and click on the link titled **"Save document library as template"**. This feature allows you to capture the entire structure of the library for reuse.
+
+**Step 4: Define Template Identification**
+Enter a **File name** and a **Template name** (e.g., "demo template"). This name will be how the template appears in your organizational app list later.
+
+**Step 5: Decide on Data Inclusion**
+Choose between two critical options:
+*   **Include Content**: Check this box if you want to restore the library at an alternate location with all its existing files and data.
+*   **Exclude Content**: Leave the box unchecked if you only want a "dummy" model that replicates the design and columns without any actual data.
+
+**Step 6: Confirm and Save**
+Click **OK** to finalize the process. SharePoint will generate the template and store it automatically within your site's app gallery.
+
+**Step 7: Navigate to Site Contents**
+To use your new template, go to **Site contents** of the site where you want to create the new library.
+
+**Step 8: Add a New App**
+Click on **"Add an app"**. Your custom template will now be listed among the available applications you can install on your site.
+
+**Step 9: Search for Your Custom Template**
+Use the search box to find your template by the name you gave it (e.g., "demo template"). Once found, click on it to start the creation process.
+
+**Step 10: Name and Create the New Library**
+Provide a name for your new library (e.g., "test") and click create. The new library will automatically feature the **same columns, design, and advanced settings** as your original model library.
+

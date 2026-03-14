@@ -1,0 +1,104 @@
+
+
+## 1. Installing SharePoint, Preparing Active Directory
+
+### 1. Create 3 users
+
+Create the following **domain users** in Active Directory:
+
+sp19admin
+sp19farm
+sp19sql
+
+Explanation:
+These accounts are required to separate roles and follow SharePoint best practices.
+
+* sp19admin
+  Used to install SharePoint and run the configuration wizard.
+
+* sp19farm
+  Used as the SharePoint Farm Account. SharePoint services run under this account.
+
+* sp19sql
+  Used by SQL Server to manage SharePoint databases.
+
+All users must be:
+
+* Domain Users
+* Password never expires
+* Enabled
+
+---
+
+### 2. Configure DNS Forward and Reverse Lookup Zones
+
+Explanation:
+SharePoint depends heavily on DNS. Proper name resolution is required for:
+
+* Central Administration
+* Web Applications
+* Service Applications
+* Server-to-server communication
+
+#### Forward Lookup Zone
+
+1. Open DNS Manager on the Domain Controller
+2. Expand Forward Lookup Zones
+3. Verify that your domain zone exists
+   Example: domain.local
+4. Inside the zone, confirm that the following records exist:
+
+   * A record for Domain Controller
+   * A record for SharePoint Server
+   * A record for SQL Server
+5. If missing, create a new Host (A) record:
+
+   * Name: SharePoint server name
+   * IP address: SharePoint server IP
+
+Purpose:
+Resolves server name to IP address.
+
+---
+
+#### Reverse Lookup Zone
+
+1. In DNS Manager, right-click Reverse Lookup Zones
+2. Select New Zone
+3. Choose Primary Zone
+4. Select IPv4 Reverse Lookup Zone
+5. Enter the network ID (example: 192.168.1)
+6. Finish the wizard
+7. Ensure PTR records are created automatically
+
+Purpose:
+Resolves IP address back to server name.
+Required for proper authentication and logging.
+
+-in forward lookup zones you define the ip and through that ip your name is recogized
+and in reverse lookup zones you define the name and aganist that name your ip is recognized
+---
+
+### 3. Add SharePoint Accounts to Local Administrators Group
+
+On the SharePoint server:
+
+1. Go to Computer Management
+2. Open Local Users and Groups
+3. Open Groups
+4. Open Administrators
+5. Add the following users:
+   sp19admin
+   sp19farm
+   sp19sql
+
+Explanation:
+These permissions are required during:
+
+* SharePoint installation
+* Farm creation
+* Initial configuration
+
+Note:
+After installation is complete, sp19farm and sp19sql should be removed from the local Administrators group for security best practices.
+

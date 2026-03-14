@@ -1,0 +1,33 @@
+ **Managing SharePoint 2019 Web Application Settings**, here is the step-by-step guide for administrative configuration, 
+
+
+**Step 1: Access Web Application Management**
+Log in to **SharePoint Central Administration** as a central administrator. Navigate to **Application Management** and click on **Manage web applications** to see the list of your configured environments.
+
+**Step 2: Select the Target Web Application**
+Identify the specific web application you wish to manage (e.g., your company portal). Once selected, the ribbon will offer various management tools such as General Settings, Service Connections, and Authentication Providers.
+
+**Step 3: Configure Regional and Quota Settings**
+Open **General Settings** to assign the correct **Time Zone** for the web application, especially if your users are in different geographic locations. You can also define **Quota Templates** to manage the storage limits for site collections.
+
+**Step 4: Manage Upload Sizes and File Handling**
+Within General Settings, you can change the **Maximum upload size**. While the default in SharePoint 2019 is 10GB, Microsoft recommends keeping it at or below this level to optimize database performance and reduce latency.
+
+**Step 5: Adjust Recycle Bin Retention**
+Locate the **Recycle Bin** settings to modify the retention time. By default, SharePoint keeps deleted items for **30 days**, but you can increase or decrease this number based on your organization's data recovery policies.
+
+**Step 6: Define Managed Paths**
+Click on **Manage Paths** to control where site collections are created. You can use the **Root** path or define a **"sites"** managed path, which allows for multiple department site collections (e.g., /sites/finance) to be organized under a single URL structure.
+
+**Step 7: Link Service Application Connections**
+Use the **Service Connections** option to select which service applications (like Search, Managed Metadata, or User Profiles) are active for the web application. You can use the default group or define a **custom group** to exclude specific services.
+
+**Step 8: Configure Authentication and Anonymous Access**
+Navigate to **Authentication Providers** to manage zones (like Default). Here, you can switch between **NTLM and Kerberos** or enable **Anonymous Access**, which is required for generating search engine Sitemaps.
+
+**Step 9: Restrict Blocked File Types**
+To enhance security, access the **Blocked File Types** settings. This allows you to define specific **file extensions** that users are prohibited from uploading to the web application.
+
+**Step 10: Set User and Permission Policies**
+Manage **User Policy** to grant global access levels, such as giving **Full Read** access to crawl accounts for search indexing. You can also define **Permission Policies** (Full Control, Full Read, Deny Write, or Deny All) to enforce security across all site collections in the web application.
+

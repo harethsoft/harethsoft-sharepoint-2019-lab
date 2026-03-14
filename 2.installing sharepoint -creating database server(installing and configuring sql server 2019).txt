@@ -1,0 +1,60 @@
+
+## 2. Installing SharePoint – Creating Database Server (Installing and Configuring SQL Server 2019)
+
+### 1. Install SQL Server 2019
+
+1. Run the **SQL Server 2019 setup** on the database server.
+2. Select **New SQL Server stand-alone installation**.
+3. Accept the license terms.
+4. Select **Database Engine Services** (do not select unnecessary features).
+5. Specify the **Instance name** (default: `MSSQLSERVER` is fine for SharePoint).
+6. Set the **SQL Server service accounts**:
+
+   * Use `sp19sql` account for SQL Server Database Engine.
+   * Use separate accounts if you have other services, or same account for simplicity in lab.
+7. Configure **Server Collation**:
+
+   * Set collation to **SQL_Latin1_General_CP1_CI_AS** (required by SharePoint).
+
+8. choice mixed mode(sql server authentication and windows authentication )
+ also add sp19sql and sp19admin accounts
+---
+### 2. install ssms 
+### 3. open microsoft sql server management studio
+	go to security 
+	go to sp19admin account then go to properties then server roles then add securityadmin ,sysadmin,dbcreater,public
+	go to sp19sql  account then go to properties then server roles then add securityadmin ,sysadmin,dbcreater,public
+### 4. Configure SQL Server for SharePoint
+
+1. Open **SQL Server Management Studio (SSMS)**.
+2. Enable **TCP/IP protocol**:
+
+   * Go to SQL Server Configuration Manager ? SQL Server Network Configuration ? Protocols for MSSQLSERVER ? Enable TCP/IP.
+3. Restart the SQL Server service to apply changes.
+4. Create **SQL Server logins** for SharePoint accounts:
+
+   * sp19farm ? dbcreator, securityadmin
+   * sp19sql ? sysadmin (for installation only)
+5. Configure **Max Degree of Parallelism**:
+
+   * Run this query in SSMS:
+     `sp_configure 'show advanced options', 1; RECONFIGURE;`
+     `sp_configure 'max degree of parallelism', 1; RECONFIGURE;`
+   * Required for SharePoint performance best practices.
+
+---
+
+### 5. Test SQL Server Connection
+
+1. On the SharePoint server, open **SQL Server Management Studio**.
+2. Connect using the `sp19farm` account.
+3. Ensure you can connect to the SQL instance and see the Databases node.
+
+Explanation:
+SQL Server must be properly installed, configured, and accessible from the SharePoint server before SharePoint installation begins.
+
+* TCP/IP ensures remote connections.
+* Proper logins and roles ensure SharePoint can create and manage its databases.
+
+---
+

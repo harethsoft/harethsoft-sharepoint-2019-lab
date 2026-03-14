@@ -1,0 +1,35 @@
+step-by-step guide on how to build a SharePoint Online Communication site
+
+**Step 1: Create the Initial Site**
+Log in to **portal.office.com**, select the **SharePoint** app, and click **Create site**. Choose the **Communication site** option. Enter a **Site name**; if the URL is already taken, you may need to adjust the name until it shows as available. Ensure your **Language** is set correctly and click **Finish**.
+
+**Step 2: Set the Visual Identity (Theme and Logo)**
+To change the site's look, click the **cog (Settings) icon** and select **Change the look**. Go to **Theme** to select a color scheme (the video uses Teal) and click **Save**. To add your branding, go back to **Change the look**, select **Header**, and under **Site logo**, click **Change** to upload your own image. You can also choose between a **Standard** or **Compact** header layout.
+
+**Step 3: Prepare Your Assets**
+Before adding content, organize your files by going to **Site contents** and then **Site Assets**. Create a **new folder** (e.g., "Images") and **drag and drop** your images and documents from your computer into this folder. This makes them easily accessible when configuring web parts.
+
+**Step 4: Configure the Hero Web Part**
+The Hero web part is the visual centerpiece of the page. Click **Edit** on the top right of the page, then click the **pencil icon** on the Hero web part to choose your layout—you can display up to **five tiles** or use a **layers** view. For each tile, click its internal pencil icon to change the **background image** (using the assets you uploaded), set the **title**, and adjust the **focal point** to ensure the best part of the image is visible.
+
+**Step 5: Create and Link New Pages**
+To make the Hero tiles functional, you need to link them to specific pages. Click the **cog icon** and select **Add a page**. It is recommended to use the **Blank template** to avoid deleting unnecessary default content. Add a page title, customize the header image, and click **Publish**. **Copy the URL** of this new page, return to the Hero web part on the homepage, and paste that URL into the **Link** section of the corresponding tile.
+
+**Step 6: Add a News Web Part**
+To keep your team informed, create another new page, add your news content, and click **Post as news on this site**. On the homepage, you can edit the **News web part** to change its layout (e.g., **Side-by-side**) and change the background color of that section to make it stand out.
+
+**Step 7: Organize Sections and Quick Links**
+You can divide your page into columns by clicking the **plus (+) button** on the left side of a section and selecting a layout like **Two columns**. In one of these columns, add a **Quick Links** web part. This allows you to "pin" important documents (like treatment guides or manuals) for easy access by the team.
+
+**Step 8: Remove Unwanted Content and Rearrange**
+Clean up the page by clicking on any default web parts you don't need (like Events or default documents) and clicking the **trash bin icon** to delete them. You can also **drag and drop** web parts (like the People profiles) into different sections of the page to improve the flow.
+
+**Step 9: Add Advanced Web Parts (Countdown and People)**
+*   **Countdown Timer**: Add this web part to highlight an upcoming event or product launch. Edit it to set the specific **date and time**, add a background image, and include a description.
+*   **People Web Part**: Use this to introduce team members. Type in the names of staff members to display their **profiles** and contact cards.
+
+**Step 10: Customize Site Navigation**
+Finally, clean up the top menu by clicking **Edit** next to the navigation links. **Remove** default links that aren't useful and click the **plus (+) button** to add custom links to the new pages you created (e.g., "Treatment Contraindications"). This ensures users can easily find the content you built.
+
+**Step 11: Final Republication**
+Once all changes are made, click **Republish** at the top of the page to make all your updates live for everyone to see.

@@ -1,0 +1,34 @@
+**Enabling and Managing SharePoint Disk-Based (BLOB) Cache**
+
+ the technical configuration of BLOB caching, here is the step-by-step guide for optimizing large file delivery, 
+
+**Step 1: Understand the Role of BLOB Cache**
+Recognize that **BLOB (Binary Large Object) cache**, also known as **disk-based cache**, is used across SharePoint 2010, 2013, 2016, 2019, and 2022 to store large files locally on the Web Front End (WFE) server.
+
+**Step 2: Identify the Performance Benefit**
+Understand that by caching files locally in the WFE's memory and storage, the system avoids **querying the SQL database** for every request, which significantly reduces the read/write load on the database server.
+
+**Step 3: Access the Web.Config File via IIS**
+To enable the cache, open **Internet Information Services (IIS)**, locate the specific site where you want to activate the cache, and explore its directory to find the **web.config** file.
+
+**Step 4: Locate the BLOB Cache Section**
+Open the web.config file in a text editor (like Notepad) and search for the **`<BlobCache`** section to find the configuration parameters for location, file types, and size.
+
+**Step 5: Activate the Cache Manually**
+Note that by default, the **`enabled` attribute is set to "false"**; you must manually change this value to **"true"** to turn on the caching functionality.
+
+**Step 6: Define the Storage Location and File Types**
+Set the **location path** where the cached files will be saved; you can also specify exactly which **file extensions** (such as .mp3, .mp4, or .gif) the BLOB cache should entertain.
+
+**Step 7: Configure the Maximum Cache Size**
+Set the **`maxSize`** attribute, which is measured in **megabytes (MB)**; you can increase or decrease this limit depending on your server's available disk space.
+
+**Step 8: Apply Changes and Refresh the Site**
+Save the modified web.config file back into the site directory and **restart or refresh the site** to initialize the new cache settings.
+
+**Step 9: Verify Automatic Cache Creation**
+Confirm the setup by playing a large file (like a video) from the client-side; the WFE will retrieve the file from the DB once and then **automatically create a local folder** to store the cached version for all subsequent users.
+
+**Step 10: Monitor via Performance Counters**
+Use the Windows **Performance Counter** tool to add "SharePoint Disk Based Cache" instances; this allows you to track the **current number of requests** being handled and the **total objects** currently saved in the cache.
+

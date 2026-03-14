@@ -1,0 +1,35 @@
+**SharePoint Automatic Site Use Confirmation and Deletion**
+
+ management of unused or dormant site collections, here is the step-by-step guide for configuring automatic deletion
+
+**Step 1: Identify the Purpose of Site Deletion Policies**
+Recognize that as an administrator, you may need to manage multiple sites that were created via **self-service site creation** but are no longer being used.
+
+**Step 2: Target Dormant and Testing Sites**
+Use this feature specifically for sites that were created by users for **testing or temporary purposes** and were never deleted by the creators after their purpose was served.
+
+**Step 3: Access the Deletion Policy in Central Admin**
+Navigate to the administration portal and locate the **"Site use confirmation and deletion"** policy available within the site collection settings.
+
+**Step 4: Define the Automated Deletion Schedule**
+Understand that this feature allows you to **schedule automatic deletions** for any site collection under a specific web application that has not been used for a long period.
+
+**Step 5: Specify the Inactivity Period**
+Define the exact **number of days** a site must remain unused before the system flags it for the deletion process.
+
+**Step 6: Configure Outgoing Email Prerequisite**
+Ensure that **outgoing email settings** are enabled in your SharePoint environment; these options will remain disabled until a mailing server is linked.
+
+**Step 7: Integrate a Mailing Server**
+Attach a mailing server, such as **Exchange 2019 on-premise**, to your SharePoint farm to activate the notification and confirmation features.
+
+**Step 8: Set Notification Intervals**
+Specify how many **notices** the system should send automatically to the site administrator or owner to alert them that the site is dormant.
+
+**Step 9: Manage Notice Resending**
+Define the period after which the system will **resend the notice** (e.g., resending after a specified period of time) if no action is taken by the user.
+
+**Step 10: Finalize Automatic Site Removal**
+Configure the threshold for final deletion; for example, setting the site to be **deleted automatically** after a specific number of notices (such as five notices) has been sent.
+
+Would you like me to create a **Quiz** to help you test your understanding of the prerequisites and scheduling options for automatic site deletion?

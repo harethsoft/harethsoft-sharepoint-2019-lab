@@ -1,0 +1,34 @@
+ **Document Versioning in SharePoint 2019**, here is the step-by-step guide for managing file changes and history, 
+
+
+**Step 1: Understand the Purpose of Document Versioning**
+Recognize that versioning allows users to edit documents while automatically keeping multiple versions rather than creating duplicate files. This out-of-the-box feature prevents previous work from being overwritten and eliminates the need for manual copies in traditional folders.
+
+**Step 2: Identify Major vs. Minor Versions**
+Distinguish between the two types: **Major versions** track significant changes like updated paragraphs or sections. **Minor (draft) versions** are used for small changes, such as editing a single string or alphabet, allowing you to track every incremental modification.
+
+**Step 3: Perform an Initial Upload**
+Upload your document to a library (e.g., Logistics Department). Note that SharePoint does not allow the upload of empty files; the document must contain some text or strings to be accepted by the system.
+
+**Step 4: Access Version History**
+To see the history of a file, click the **three dots** (ellipsis) next to the document name and select **Version history**. Initially, you will see only one version (Version 1.0) modified by the original uploader.
+
+**Step 5: Create New Versions via Replacement**
+When you edit a document locally and upload it again to the same library, SharePoint will ask if you want to replace the existing file. Once replaced, a new version is automatically generated in the history log.
+
+**Step 6: View or Restore Previous Versions**
+From the Version History menu, you can click on any previous version to **view** it or **restore** it as the latest version. This allows you to easily recover data if a recent edit was incorrect.
+
+**Step 7: Configure Versioning Settings**
+To manage how versions are stored, navigate to **Library settings** and select **Versioning settings**. By default, versioning is enabled for all new SharePoint document libraries.
+
+**Step 8: Set Major Version Limits**
+You can control server storage by limiting the number of major versions kept. While the default is often higher, you can set it to a specific number (e.g., 2 or 3 versions) based on your requirements to ensure the system only retains the most recent copies.
+
+**Step 9: Enable Minor Draft Versions**
+If your workflow requires detailed tracking, enable both major and minor versions. This creates a numbering sequence like **1.0, 1.1, 1.2**, which then converts to **2.0** once a major change is published.
+
+**Step 10: Verify the Automatic Cleanup**
+After setting a limit (e.g., 3 versions), continue uploading new edits. Check the version history again to confirm that SharePoint is only retaining the last three versions as specified in your settings, automatically deleting the oldest ones.
+
+Would you like me to create a set of flashcards to help you study these document versioning types and settings?

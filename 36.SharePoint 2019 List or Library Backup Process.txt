@@ -1,0 +1,35 @@
+**SharePoint 2019 List or Library Backup Process**
+
+ performing a document library or list export, here is the step-by-step guide for granular data backup,
+
+
+**Step 1: Understand the Third Backup Level**
+Identify this process as the third type of backup, which focuses specifically on individual **lists or libraries** residing under a particular site collection.
+
+**Step 2: Navigate to the Export Interface**
+Access **SharePoint Central Administration**, go to the "Perform a backup and restore" section, and select the option to **"Export a site or list"**.
+
+**Step 3: Select the Site Collection**
+Choose the specific **site collection** from the available list that contains the library you wish to back up (e.g., the Logistic and Supply Chain Department).
+
+**Step 4: Choose the Specific Site**
+Select the specific site or **subsite** level, as a single site collection may contain multiple different subsites.
+
+**Step 5: Identify the Target Library**
+From the list of available apps within that site, select the specific **document library or list** (e.g., Logistics Document) that requires a backup.
+
+**Step 6: Define the Backup Path and Name**
+Provide a destination path and name the backup file using the **.CMP extension** (for example, `dock.CMP`).
+
+**Step 7: Configure Security and Versioning Options**
+Choose whether to **export full security** settings and decide on the versioning depth, such as exporting only the **last major version**.
+
+**Step 8: Initiate the Export Process**
+Click on **"Start Export"** to begin the operation, which will export the document library to your specified storage location.
+
+**Step 9: Monitor the Job Status**
+Wait for the system to process the request; the status will change to **"Completed"** once the list-level backup is finished.
+
+**Step 10: Verify the Exported CMP File**
+Refresh your storage folder to confirm the presence of the **CMP file**, which can now be easily imported into another site collection later.
+

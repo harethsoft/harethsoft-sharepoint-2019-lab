@@ -1,0 +1,35 @@
+**SharePoint 2019/2022 Custom List Views and Feature Management**
+
+ configuration of lists and views in SharePoint 2019 and 2022 on-premise, here is the step-by-step guide for optimizing data display, 
+
+
+**Step 1: Recognize the Versatility of Custom Lists**
+Understand that **custom lists** are used extensively in SharePoint for data management and offer powerful built-in features for **sorting, grouping, and filtering** to organize your records effectively.
+
+**Step 2: Create Custom Views for Specific Tasks**
+Rather than modifying the **default view**, create new, specific views (such as "Group By" or "Filtered View") to allow users to switch between different data perspectives easily.
+
+**Step 3: Implement Primary and Nested Grouping**
+Use the **"Group By"** feature to categorize items. You can group by one field (e.g., Country) and then further "dig in" by adding a **second level of grouping** (e.g., City); however, note that grouping is limited to a **maximum of two fields**.
+
+**Step 4: Configure Grouping Display Modes**
+Choose between **"Expanded" or "Collapsed"** views for your groups. Use the expanded view for smaller data sets to see all details immediately, or the collapsed view for large lists to provide a cleaner summary.
+
+**Step 5: Apply Sorting Logic**
+Organize your data by applying **sorting rules** in either **ascending or descending order** based on specific columns, such as sorting countries alphabetically to find information faster.
+
+**Step 6: Utilize Data Filtering**
+Configure **filtered views** to display only the items that meet specific criteria, such as showing only sites where the **"Country equals Country A,"** which helps in focusing on relevant subsets of data.
+
+**Step 7: Enable Numerical Totals and Aggregations**
+Use the **"Totals"** section in view settings to perform calculations on numeric columns, including **Count, Average, Maximum, Minimum, and Sum**.
+
+**Step 8: Manage Column Visibility and Ordering**
+Customize your views by selecting which columns to show (e.g., **ID, Created By, or Modified**) and manually adjust their **numerical order** to prioritize the most important information on the screen.
+
+**Step 9: Apply Visual Styles and Set Item Limits**
+Enhance the interface by selecting styles like **"Shaded" or "Boxed"** to differentiate records. Additionally, manage the **"Item Limit"** (defaulting to 30); be cautious about increasing this significantly, as it increases the **load on the server** during data queries.
+
+**Step 10: Toggle Between Modern and Classic Views**
+Be aware of **compatibility issues**; if certain features like "Totals" or "Shaded" styles do not appear correctly in the **Modern view**, switch to the **Classic SharePoint view** to ensure all graphical and mathematical values are displayed.
+

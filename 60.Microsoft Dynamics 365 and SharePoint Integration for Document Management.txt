@@ -1,0 +1,34 @@
+**Microsoft Dynamics 365 and SharePoint Integration for Document Management**
+
+ integration of Microsoft Dynamics 365 with SharePoint, here is the step-by-step guide for enhancing CRM functionality
+
+**Step 1: Define the Role of Dynamics 365**
+Understand that **Microsoft Dynamics 365** primarily handles **Customer Relationship Management (CRM)**, organizing data into various entities, fields, and rows of records.
+
+**Step 2: Identify Document Management Requirements**
+Recognize that specific entities or fields within the CRM may require **document keeping**, such as attaching a **technical catalog** to a specific product record.
+
+**Step 3: Enhance Functionality via Integration**
+Acknowledge that while Dynamics handles data records, it can be **integrated with SharePoint** to specifically enhance its **document management** capabilities.
+
+**Step 4: Follow Microsoft Recommendations**
+Adhere to Microsoft’s recommendation to use SharePoint as the **dedicated storage product** for all document-related data associated with Dynamics 365 records.
+
+**Step 5: Target Compatible SharePoint Versions**
+Ensure you are using **SharePoint 2019 or Server Subscription Edition** to facilitate this integration within your on-premise environment.
+
+**Step 6: Establish Separate Data Storage**
+Use SharePoint as a **separate place** to keep data in document form, ensuring that the CRM database is not overloaded with large files.
+
+**Step 7: Create Real-Time Entity Links**
+Implement **real-time links** between Dynamics entities and SharePoint, allowing the CRM to point directly to the documents stored in the SharePoint repository.
+
+**Step 8: Map Documents to Particular Fields**
+Configure the integration so that documents are linked to **particular fields or entities**, ensuring that every record has its relevant supporting documentation.
+
+**Step 9: Improve Overall Document Management**
+Leverage the specialized features of SharePoint to achieve **better document management** than what is available natively within the CRM platform.
+
+**Step 10: Verify Linked Records and Values**
+Once integrated, open your Dynamics entities to **check and verify the documents** that are linked with those specific values and records.
+

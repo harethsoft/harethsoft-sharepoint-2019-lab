@@ -1,0 +1,35 @@
+ **SharePoint 2019 Recycle Bin Retention Policy**, here is the step-by-step guide for managing deleted file storage,
+
+**Step 1: Understand the Recycle Bin Mechanism**
+When a user deletes a document from a library (e.g., Logistics and Supply Chain), it is not immediately destroyed. Instead, it moves to the **Recycle Bin**, where it stays for a specified period before moving to the administrative level.
+
+**Step 2: Recognize the Two-Stage Deletion Process**
+SharePoint utilizes a two-tier system:
+*   **First-Stage Recycle Bin**: Accessible by the user who deleted the file.
+*   **Second-Stage (Administrator) Recycle Bin**: Where files go after being deleted from the user's bin, accessible only by site collection or web application administrators.
+
+**Step 3: Access Central Administration**
+To change the retention settings, log in to your **SharePoint Central Administration** portal.
+
+**Step 4: Navigate to Web Application Management**
+Go to the **Application Management** section and click on **Manage web applications** to see your list of active sites and ports.
+
+**Step 5: Select the Target Web Application**
+Identify and select the specific web application (e.g., the one on port 45508) that you wish to configure.
+
+**Step 6: Open General Settings**
+In the ribbon at the top of the page, click on **General Settings** to access the backend configuration for that web application.
+
+**Step 7: Locate the Recycle Bin Section**
+Scroll to the bottom of the General Settings window to find the **Recycle Bin** portion. Here, you can verify if the status is currently set to "On".
+
+**Step 8: Adjust the Retention Period**
+By default, SharePoint deletes items after **30 days**. To optimize server space, you can decrease this number (e.g., to **10 days**). This ensures files are purged sooner to free up storage.
+
+**Step 9: Configure Second-Stage Quota**
+Set the capacity for the second-stage recycle bin. This is defined as a **percentage of the live site quota** (e.g., 50%). If this quota is exceeded, the oldest documents in the second-stage bin will be permanently deleted.
+
+**Step 10: Apply and Verify Changes**
+Click **OK** at the bottom of the settings page to save your changes. The new retention policy will take effect immediately, controlling how long deleted documents remain in your environment before permanent removal.
+
+Would you like me to create a set of **Flashcards** to help you remember these administrative paths and retention stages?

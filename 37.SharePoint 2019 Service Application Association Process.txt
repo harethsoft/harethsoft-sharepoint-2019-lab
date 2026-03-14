@@ -1,0 +1,34 @@
+**SharePoint 2019 Service Application Association Process**
+
+associating service applications with web applications, here is the step-by-step guide for managing these connections, 
+
+**Step 1: Understand the Core Components**
+Identify the two main components in Central Administration: **Web Applications** and **Managed Service Applications**.
+
+**Step 2: Recognize Service Purposes**
+Acknowledge that different services, such as **Search**, are configured to serve specific functional purposes within your environment.
+
+**Step 3: Identify Default Association Behavior**
+By default, any service application you create is **automatically associated** with all available web applications in the farm upon creation.
+
+**Step 4: Access Web Application Management**
+Log in to **SharePoint Central Administration** and navigate to the **Manage web applications** section.
+
+**Step 5: Select the Target Web Application**
+From the list, choose the specific web application you want to manage, whether it is the default one or one created specifically for your organization.
+
+**Step 6: Open Service Connections**
+Locate and click on the **Service Connections** option in the ribbon to view the current list of associated services.
+
+**Step 7: Switch to Custom Configuration**
+To change which services are linked, change the selection from the default group to **"Custom"**.
+
+**Step 8: Select Desired Services**
+Manually **check or uncheck** the specific service applications (e.g., Search Service) you want to associate with that particular web application.
+
+**Step 9: Apply and Save Changes**
+Click **OK** to finalize the custom association, ensuring only the selected services serve that web application.
+
+**Step 10: Revert or Modify as Needed**
+Note that you can always return to this module to add, change, or revert the connections back to the **default settings** as per your organizational requirements.
+

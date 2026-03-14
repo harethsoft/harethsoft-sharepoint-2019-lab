@@ -1,0 +1,34 @@
+**Restricting File Extensions in SharePoint Web Applications**
+
+ restriction of specific file types, here is the step-by-step guide for enforcing these security settings,
+
+**Step 1: Understand the Blocking Functionality**
+Recognize that SharePoint provides an option to specify various file extensions (such as **PDF or JPG**) and block them to prevent any user in a specific web application from uploading those file types.
+
+**Step 2: Verify Administrative Access**
+Ensure you are logged in as a **SharePoint administrator** with access to the **Central Administration** portal, as these settings cannot be managed at the site level.
+
+**Step 3: Navigate to Application Management**
+Open the Central Administration home page and click on the **"Application Management"** section to begin managing your farm's web services.
+
+**Step 4: Access Manage Web Applications**
+Select the **"Manage web applications"** link to see the list of all web applications currently deployed in your server farm environment.
+
+**Step 5: Select the Target Web Application**
+Identify and click on the specific **web application** (e.g., SharePoint 80) where you want to apply the file restrictions.
+
+**Step 6: Open Blocked File Types Settings**
+With the web application selected, locate and click on the **"Blocked file types"** button in the top ribbon menu to view the configuration list.
+
+**Step 7: Define Restricted Extensions**
+Specify the extensions you wish to block, such as **JPG or PDF**. Ensure you define each extension on a **new line** to ensure the system processes them correctly.
+
+**Step 8: Save the Configuration**
+Click **"OK"** to save your changes. The system will now validate all future document uploads against this updated list of restricted extensions.
+
+**Step 9: Test the Upload Restriction**
+Navigate to a document library within that web application and attempt to upload a file that matches a blocked extension (e.g., an **images.jpg** or a **PDF file**).
+
+**Step 10: Verify the Enforcement Error**
+Confirm that the system displays a **caution or error message** stating that "the following file has been blocked by the administrator," successfully preventing the file from being saved in the repository.
+

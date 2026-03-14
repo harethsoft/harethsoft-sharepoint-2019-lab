@@ -1,0 +1,25 @@
+differences between **Classic** and **Modern** SharePoint sites, here is the step-by-step comparison and guide on how they are managed, 
+
+**Step 1: Identify the Site Type**
+Understand the version of SharePoint you are using. **Classic sites** were the standard for older versions like 2013 and 2016, while **Modern sites** (available in SharePoint 2019 and Online) offer a significantly improved user interface and easier administration,.
+
+**Step 2: Compare Initial Layout and Navigation**
+Observe the "look and feel." **Modern sites** feature a clean **left navigation pane** and a **search box** clearly positioned at the top of the page. In contrast, **Classic sites** have a less intuitive layout where the search functionality and navigation are managed differently.
+
+**Step 3: Access Page Editing**
+To make changes to a **Modern site**, click the **Edit** button available at the top of the page (if you have the correct permissions). For a **Classic site**, you must navigate through more complex menus like **Edit Source**, **Format Text**, and **Edit Properties**, which is generally less user-friendly.
+
+**Step 4: Manage Web Parts and Partitions**
+In a **Modern site**, click the **plus (+)** icon to easily add web parts such as **Document Libraries**, **Images**, **People**, **Quick Charts**, or **Quick Links**,. In a **Classic site**, you have to manually "Insert" web parts, which requires more effort to configure and align,.
+
+**Step 5: Configure Page Grids and Columns**
+Use the modern interface to quickly split your page into **different column layouts** (e.g., two columns, three columns, or a one-third column) depending on your needs. In **Classic sites**, changing the grid or layout is described as "very difficult" compared to the modern experience.
+
+**Step 6: Handle Document Libraries**
+When working with documents, the **Modern view** provides a much better visual experience, showing clear icons for Word, Excel, or PowerPoint. In **Modern sites**, you can also easily **change the view settings**, whereas **Classic sites** offer limited options for changing how documents are displayed.
+
+**Step 7: Upload and View Content**
+Upload documents by dragging and dropping or using the upload button. In **Modern sites**, the uploaded files appear with a **better visual preview** immediately. In **Classic sites**, the process is more manual and the resulting view is less modern.
+
+**Step 8: Publish Changes**
+Once you have finished adding your parts and organizing your columns in a **Modern site**, click **Publish** (or "Save and Close") to make the updated layout visible to your team. Modern sites require "very less power" to configure these professional-looking pages.

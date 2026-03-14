@@ -1,0 +1,34 @@
+**SharePoint 2019 MySite Creation and Configuration**
+
+ setup of personal profiles and social features in SharePoint 2019 or 2022, here is the step-by-step guide for creating MySites
+
+**Step 1: Verify User Profile Service Prerequisites**
+Ensure that the **User Profile Service** is active and that a **synchronization connection** with Active Directory is configured so all domain users are synchronized with SharePoint.
+
+**Step 2: Choose a Web Application**
+Decide whether to use an existing web application or follow the recommended practice of creating a **separate web application** specifically dedicated to hosting MySites.
+
+**Step 3: Deploy the My Site Host Site Collection**
+Create a new site collection within your chosen web application using the **"Enterprise level My Site Host"** template and define the primary and secondary administrators.
+
+**Step 4: Configure a Wildcard Managed Path**
+Navigate to the web application's managed paths and add a new prefix (e.g., /personal) with **Wildcard inclusion** to allow individual user sites to be created under this path.
+
+**Step 5: Create a Custom Permission Policy**
+Define a permission policy level that explicitly includes the ability to **"Create Subsites"** and "View Items," which is necessary for users to manage their own profile areas.
+
+**Step 6: Grant Policy to All Authenticated Users**
+Assign this new permission policy to the **"Everyone" or "Authenticated Users"** group at the web application level to ensure all legitimate users have the required access.
+
+**Step 7: Link My Site Host in Service Settings**
+Go to the User Profile Service application settings and enter the URL of the **My Site Host** site collection you created earlier into the configuration field.
+
+**Step 8: Define the Personal Site Location**
+Specify the **personal site location** within the service settings, ensuring it matches the wildcard managed path (e.g., sites/personal) defined in Step 4.
+
+**Step 9: Configure Optional Self-Service Creation**
+Determine if you want to enable **Self-Service Site Creation**, which allows users to automatically generate their own personal site collections when they first access the feature.
+
+**Step 10: Validate via the "About Me" Profile**
+Confirm successful setup by clicking on **"About Me"** in the user menu; if configured correctly, you will be redirected to a personal page where you can upload pictures and edit profile info.
+

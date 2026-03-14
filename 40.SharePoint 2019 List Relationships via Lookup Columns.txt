@@ -1,0 +1,34 @@
+
+**SharePoint 2019 List Relationships via Lookup Columns**
+
+ connecting custom lists, here is the step-by-step guide for creating a data union, 
+**Step 1: Identify the Source List**
+Start by ensuring you have an existing custom list (e.g., "Employee Record") that contains the data you want to reference or "lookup" from another location.
+
+**Step 2: Create the Target List**
+Navigate to **Site Contents**, click on **New**, and select **List**. Provide a name for this new list where the linked data will appear (e.g., "Lookup Example").
+
+**Step 3: Access the New List Settings**
+Open your newly created list, navigate to the **List settings** to begin adding the functional columns required for the relationship.
+
+**Step 4: Create a New Column**
+Click on **"Create column"** and give it a clear name that reflects the data it will hold, such as **"Employee Name"**.
+
+**Step 5: Select the Lookup Data Type**
+From the list of available types, select **Lookup (information already on this site)**. This tells SharePoint to pull information from an existing source within the site collection.
+
+**Step 6: Define the Data Source**
+In the column settings, go to the **"Get information from"** dropdown menu and select your source list (e.g., "Employee Record").
+
+**Step 7: Choose the Primary Display Field**
+Select the specific field from the source list that you want to appear in your dropdown menu (e.g., the **Title** field, which might contain the employee's name).
+
+**Step 8: Add Additional Supported Fields**
+You can also check boxes for additional fields, such as **Date of Birth**. These fields will automatically populate in your new list whenever a primary item is selected.
+
+**Step 9: Test the Lookup Functionality**
+Return to your "Lookup Example" list and click **New**. You will see a dropdown menu containing all the entries (rows) from your original source list.
+
+**Step 10: Verify the Data Union**
+Select an item from the dropdown (e.g., "John") and save. SharePoint will successfully join the records, displaying the selected name along with any associated fields like the date of birth.
+

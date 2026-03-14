@@ -1,0 +1,35 @@
+**Building a Modern SharePoint Online Communication Site Landing Page**
+
+ step-by-step construction of a modern communication site, here is the exhaustive guide for building your landing page,
+
+
+**Step 1: Confirm Subscription and Access**
+Ensure you have at least a **Microsoft 365 business basic subscription** with **SharePoint admin access** before beginning the build. It is highly beneficial to have your text and images prepared in advance to speed up the process.
+
+**Step 2: Initialize Site Creation**
+Navigate to the SharePoint creation portal, select **"Communication site,"** and choose a site name; if the URL is unavailable, you can edit the name until it becomes available. Ensure your **language settings** are correct before clicking finish.
+
+**Step 3: Customize Theme and Color**
+Access the **cog icon**, select **"Change the look,"** and go to **"Theme"** to choose a visual style, such as Teal. You can further click **"Customize"** to refine the colors to match your branding.
+
+**Step 4: Configure Header and Logo**
+Within the "Change the look" menu, select **"Header"** to choose between a standard or compact layout. Click **"Change"** under the site logo section to upload your own branding image from your computer.
+
+**Step 5: Design the Hero Web Part**
+Edit the default **Hero web part** to bring focus to your page by choosing between **tiles or layers** layouts. You can display up to **five items** using compelling images and text to draw attention to key areas.
+
+**Step 6: Manage Site Assets and Folders**
+Upload your media by navigating to **Site Assets**, creating a **new folder for images**, and using a **drag-and-drop** method to ensure your content is available for use in web parts.
+
+**Step 7: Create Content Pages using Templates**
+Add new pages via the cog icon, selecting from three templates; it is often recommended to use the **"Blank" template** to avoid the need to delete pre-implemented default web parts. Name your page, set a **focal point** for the header image, and publish it.
+
+**Step 8: Link Web Parts to Specific Content**
+Copy the **URL of your published page** and return to the home page to edit your Hero web part. Click the pencil icon on a tile, select **"Change link,"** and paste your page address to ensure users are redirected correctly.
+
+**Step 9: Deploy News and Quick Links**
+Add a **News web part** to keep your team informed with important stories, choosing layouts like **"side-by-side"** for better visibility. Use the **Quick Links web part** to pin important documents for easy access.
+
+**Step 10: Implement Interactive Parts and Navigation**
+Add a **Countdown timer** for upcoming events and a **People web part** to showcase staff profiles. Finally, edit the **site navigation** by removing default links and adding your custom page links to ensure a clean user experience.
+

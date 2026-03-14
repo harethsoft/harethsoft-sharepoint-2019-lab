@@ -1,0 +1,33 @@
+ **SharePoint Sitemaps and the Robots.txt file**, here is the step-by-step guide on how to activate and verify these features for your site collection, 
+
+
+**Step 1: Understand the Purpose of SharePoint Sitemaps**
+Recognize that the sitemap is a feature designed to improve the **Search Engine Optimization (SEO)** of your website. It identifies all valid URLs within your SharePoint site that need to be crawled by search engines.
+
+**Step 2: Enable Anonymous Access**
+For effective search engine optimization and to allow external crawlers to access the sitemap, ensure that **Anonymous access** is enabled for your site collection.
+
+**Step 3: Access Site Settings**
+Log in to your SharePoint site collection. Click on the gear icon, select **Site information**, and then click on **View all site settings**.
+
+**Step 4: Navigate to Site Collection Features**
+Under the "Site Collection Administration" section, click on **Site collection features**. Note that this is a feature managed at the collection level rather than the individual site level.
+
+**Step 5: Locate the Search Engine Sitemap Feature**
+Scroll through the list of features or use the search function to find the **"Search engine sitemap"** option.
+
+**Step 6: Activate the Feature**
+Click the **Activate** button next to the Search engine sitemap feature. Once activated, SharePoint will automatically generate the sitemap on a recurring basis.
+
+**Step 7: Verify the Activation**
+After activation, you can verify that the system has successfully generated the necessary files.
+
+**Step 8: Access the Robots.txt File**
+To check the generated sitemap instructions, navigate to your browser's address bar. Type your website's base URL followed by **"/robots.txt"** (for example: `http://your-site/robots.txt`) and press Enter.
+
+**Step 9: Review the File Content**
+The browser will prompt you to open or save a text file. Open this file to view the **robots.txt instructions** that guide search engine crawlers on how to index your SharePoint site.
+
+**Step 10: Monitor Recurring Generation**
+Once activated, you do not need to manually update the file; SharePoint will continue to automatically include all valid URLs in the sitemap to ensure your search results remain up to date.
+

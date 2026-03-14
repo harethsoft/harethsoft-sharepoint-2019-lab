@@ -1,0 +1,36 @@
+**SharePoint 2019 Web Application and Site Hierarchy Architecture**
+
+SharePoint architecture and design, here is the step-by-step guide to building a scalable environment, 
+
+
+**Step 1: Create the Web Application Container**
+Understand that a **Web Application** is essentially an **empty container** with a unique URL and port that serves as the foundation for your sites.
+
+**Step 2: Configure the IIS Application Pool**
+Whenever you create a web application, a corresponding **Application Pool** is created in IIS to manage all sessions and activities when users interact with the site.
+
+**Step 3: Define Ports and Security Bindings**
+Assign a specific **port** and configure **SSL/HTTPS certificates**; in SharePoint 2019 and later, you can deploy certificates directly during web app creation rather than doing it manually in IIS.
+
+**Step 4: Deploy the Root Site Collection**
+Create the first **site collection** at the root level to serve as the "main gate" or homepage, providing an entry point for users to navigate to other repositories.
+
+**Step 5: Select a Functional Template**
+Choose a template that fits your needs, such as a **Communication site** for broad information sharing or a **Team site** for internal departmental collaboration.
+
+**Step 6: Distinguish Subsites from Site Collections**
+Understand that **subsites** are created within a site collection for specific purposes but automatically reside in the same content database as the parent.
+
+**Step 7: Map Site Collections to Content Databases**
+Recognize that a site collection has a **one-to-one mapping** with a content database, which is a combination of MDF and LDF files on your database server.
+
+**Step 8: Implement Departmental Database Isolation**
+To manage storage effectively, create **separate content databases** for large departments (like HR or Finance) so their site collections and data are isolated from others.
+
+**Step 9: Optimize Performance with Size Limits**
+Keep your content databases at an **optimal size of 200 GB to 300 GB**; exceeding this limit can make read/write queries expensive and slow down the system.
+
+**Step 10: Establish Global Navigation**
+Add links to the **root site's navigation** that point to your various site collections and subsites, ensuring users can easily access document centers and repositories across the farm.
+
+Would you like me to create an **Infographic** that visualizes this hierarchy—from the Web Application and Application Pool down to the individual Content Databases?

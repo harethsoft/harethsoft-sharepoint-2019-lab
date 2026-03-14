@@ -1,0 +1,35 @@
+**SharePoint Permission Levels: Inheritance vs. Unique Models**
+
+ how access is managed in SharePoint, here is the step-by-step guide to understanding permission inheritance and unique security models,
+
+
+**Step 1: Understand the Inheritance Model**
+Recognize that by default, all permissions defined at the **root or top level** are equally applicable down to the lowest level of child objects, such as site collections and subsites.
+
+**Step 2: Identify the Benefits of Inheritance**
+The primary advantage of following the inheritance process is that it is **easy for management**, as it maintains the same permission set for everyone across the entire hierarchy.
+
+**Step 3: Recognize Inheritance Limitations**
+Understand that under this model, you cannot assign **unique permissions** to specific applications; for example, you cannot give one group access to "Library 1" and a different group access to "Library 2" if they are in the same inherited site.
+
+**Step 4: Use Inheritance for Public Repositories**
+Apply this model in scenarios involving **public repositories**, similar to Google, where you want everyone to have "view" or "read" access to documents without the ability to edit them.
+
+**Step 5: Define the Unique Permission Model**
+Use this model when you need separate user groups to have **separate identities** and different access rights to specific containers or data assets.
+
+**Step 6: Create a Primary Group for Browsing**
+Define a "Primary Group" that includes multiple user groups, granting them **view permission** at the web application level so they can browse the site before reaching their specific authorized areas.
+
+**Step 7: Break Inheritance Manually**
+Remember that inheritance is **enabled by default** in SharePoint; to apply unique security, an administrator must manually break the inheritance at the specific subsite or library level.
+
+**Step 8: Grant Specific Container Permissions**
+Assign unique rights—such as **Read or Contribute** (add, edit, delete)—to different groups for specific containers, ensuring that Group A cannot access Group B's data.
+
+**Step 9: Utilize Search Security Trimming**
+Leverage the search feature, which ensures that the crawler indexes data so that users **only see search results** for the specific files and sites they are authorized to access.
+
+**Step 10: Evaluate Management Complexity**
+Note that while unique permissions offer better security for private data, they are **relatively difficult to manage** as the site grows, requiring administrators to track permissions at multiple individual levels.
+

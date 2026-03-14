@@ -1,0 +1,35 @@
+**Integrating SharePoint On-Premise with Exchange 2019 for Alerts and Sharing**
+
+ the technical integration of SharePoint and Exchange on-premise, here is the step-by-step guide for configuring alerts and file sharing,
+
+
+**Step 1: Ensure Technical Prerequisites**
+Verify that both **SharePoint and Exchange** (versions 2013, 2016, or 2019) are installed in your on-premise environment and that **email mailboxes** have been created for all users and administrators who need to receive alerts.
+
+**Step 2: Identify the Exchange Server FQDN**
+Find the **Fully Qualified Domain Name (FQDN)** of your Exchange Server by running the **`nslookup` command** followed by the server’s IP address in a command prompt (e.g., exchange.hltf-tech.com).
+
+**Step 3: Access Outgoing Email Settings**
+Navigate to the **SharePoint Central Administration**, go to **System Settings**, and click on **"Configure outgoing email settings"** to begin the integration process.
+
+**Step 4: Configure the SMTP Server and Port**
+Enter the Exchange Server’s **FQDN** in the Outbound SMTP Server field and ensure the **Port is set to 25**, which is the default for most Exchange front-end transport connectors.
+
+**Step 5: Set the Reply-To Address**
+Define a **"Reply-to" email address**; while the "From" address is often automated, the reply-to address is mandatory for handling user responses to system-generated alerts.
+
+**Step 6: Create Library Alerts**
+Go to a specific document library, select the **Alert Me** option, and specify the recipients, the **type of changes** to monitor (New items, All changes, or Deletions), and the **delivery frequency** (Immediate, Daily, or Weekly).
+
+**Step 7: Validate Alert Functionality**
+Confirm successful setup by checking the user’s mailbox for a **confirmation email**; subsequently, any action like **adding or deleting a file** should trigger an automated notification detailing who performed the action and when.
+
+**Step 8: Utilize Link-Based File Sharing**
+Instead of sending large attachments, use the **"Share" button** to send a **direct link** to the document; this minimizes load on the mailing server and saves significant network bandwidth.
+
+**Step 9: Manage Sharing Permissions**
+During the sharing process, decide whether to **"Allow editing"** or restrict the recipient to **"Read-only"** access; the sharing link dynamically changes its behavior based on this selection.
+
+**Step 10: Perform Dual-Verification Access**
+When a recipient clicks a shared link, the system may require **username and password verification** to ensure that only the direct recipient can access the live, buffered content from the network.
+

@@ -1,0 +1,25 @@
+ **SharePoint 2019 Navigation**, here is the step-by-step guide on how to manage the left and top navigation bars
+
+**Step 1: Identify Navigation Types**
+Understand that modern team sites have two main navigation areas: the **Left Navigation Bar** (also known as the Quick Launch) and the **Top Navigation Bar**.
+
+**Step 2: Edit the Left Navigation (Quick Launch)**
+To modify the left bar, click the **Edit** button at the bottom of the menu. You can add a new link by clicking the **plus (+)** sign, or move existing links **up or down** to change their order.
+
+**Step 3: Create Sub-links and Hierarchy**
+To organize your menu, you can move a link and select the option to make it a **sub-link**. This hides it under a parent link with an arrow button. You can also **promote** a sub-link back to a main link at any time.
+
+**Step 4: Hide the Left Navigation Bar**
+If you want your website content to occupy the full width of the screen, go to **Site settings**, then **Navigation elements**. Uncheck the **Enable Quick Launch** button and save. The left bar will disappear.
+
+**Step 5: Access Top Navigation Settings**
+To set up a menu at the top of the page, go to **Site settings** and select the **Top link bar** option.
+
+**Step 6: Add Links to the Top Bar**
+Click on **New Navigation Link**. Paste the **URL** of the page or document library you want to link to, and type in a **Display name** (e.g., "Home" or "Document Library 1"). Click **OK** to make it appear on the front page.
+
+**Step 7: Navigate Between Pages**
+Once your links are set, you can easily move between the home page and various document folders or sub-pages by clicking the links you created in either the top or left bars.
+
+**Step 8: Combine Navigation Styles**
+Depending on your design needs, you can choose to use only one bar or **both simultaneously**. For example, you might use the top bar for global site collection links and the left bar for specific content within that site.

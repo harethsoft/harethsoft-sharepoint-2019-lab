@@ -1,0 +1,34 @@
+**SharePoint 2019 Site Collection Backup Process**
+
+Based on the source transcript about performing site collection backups, here is the step-by-step guide for securing your site data,
+
+**Step 1: Access the Backup Interface**
+Navigate to the central administration area designated for performing **site collection backups**.
+
+**Step 2: Identify the Hosting Web Application**
+Recognize the main **web application** that hosts your various site collections. This is the top-level container where your different sites are organized.
+
+**Step 3: Review Available Site Collections**
+Examine the list of available site collections within your environment. In a typical demonstration, you might see several sites (such as the six shown in the source) hosted under a single application.
+
+**Step 4: Select the Specific Target Site**
+Identify and select the specific site you wish to back up. For instance, you might choose the **root site** to ensure your primary landing page is secured.
+
+**Step 5: Confirm Your Selection**
+After highlighting the correct site collection, click **OK** to proceed to the configuration of the backup file.
+
+**Step 6: Name the Backup File**
+Provide a clear and descriptive name for the output file, ensuring you use the correct extension (e.g., **"root site.bak"**) so the system recognizes it as a backup file.
+
+**Step 7: Initiate the Backup Job**
+Click the button to **start the backup**. The system will place the job into a queue and begin processing the data.
+
+**Step 8: Monitor the Completion Time**
+Understand that the duration of the backup **depends entirely on the data size** of your site collection. While a small demonstration site may finish in a few seconds, larger production environments will take longer.
+
+**Step 9: Verify the Backup File**
+Navigate to your storage folder and **refresh the view** to confirm that the `.bak` file has been created successfully and is saved in the intended location.
+
+**Step 10: Prepare for Future Restoration**
+Note that while the backup is done through the interface, the **restoration process** typically requires using the **SharePoint Management Shell** and executing specific scripts to bring the site back online.
+

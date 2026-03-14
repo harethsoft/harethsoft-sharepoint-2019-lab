@@ -1,0 +1,35 @@
+**Power BI On-Premise Integration and Data Analytics**
+
+ integration of Power BI with SharePoint 2019 or Server Subscription Edition, here is the step-by-step guide for leveraging data sciences and analytics
+
+
+**Step 1: Identify the Integration Goal**
+Recognize that integrating SharePoint with **Power BI server** provides a powerful platform for data sciences and analytics, allowing for the creation of advanced graphical and real-time reports.
+
+**Step 2: Facilitate Executive Decision Making**
+Understand that these reports are designed to help **top-level managers** make better decisions by providing a quick visual idea of organizational trends without requiring them to read through thousands of rows of raw data.
+
+**Step 3: Deploy the Power BI Server**
+Begin the technical process by performing a **deployment of the Power BI server** within your local on-premise environment.
+
+**Step 4: Integrate with SharePoint Server**
+Connect your Power BI server with your **SharePoint 2019 or Subscription Edition** farm to enable seamless communication between the data analytics platform and your document repositories.
+
+**Step 5: Establish Real-Time List Connectivity**
+Perform a **real-time connectivity** setup to link SharePoint lists—which contain the actual records and values—directly to the Power BI reporting engine.
+
+**Step 6: Generate Graphical Trends and Summaries**
+Transform raw records into **pie charts, bar graphs, and summary reports** that display counts and trends, giving a clearer picture of what is happening within the organization.
+
+**Step 7: Access External SQL Data**
+Utilize the integration to visualize data that may be residing in **external SQL Servers**, allowing you to bring outside data into the SharePoint graphical environment.
+
+**Step 8: Configure Business Connectivity Services (BCS)**
+Use the **Business Data Connectivity service** to link external databases with SharePoint, mapping those external records so they can be shown through SharePoint external lists.
+
+**Step 9: Map External Lists for Visualization**
+Once external data is mapped to a **SharePoint external list**, you can then map that list to the Power BI server to generate graphical values from your external databases.
+
+**Step 10: Secure the Required Subscription**
+Ensure you obtain the necessary **subscription for the Power BI server** to complete the installation in your on-premise domain and begin realizing the countless advantages of integrated data analytics.
+

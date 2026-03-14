@@ -1,0 +1,34 @@
+**Skype for Business Integration and Video Collaboration**
+
+ benefits of linking Skype for Business with SharePoint, here is the step-by-step guide for establishing real-time collaboration
+
+**Step 1: Identify the Integration Goal**
+Recognize that linking **Skype for Business** (formerly Microsoft Lync) with SharePoint provides a powerful platform for real-time video communication and file sharing within your on-premise domain.
+
+**Step 2: Establish the Server Foundation**
+Ensure you have an installed and configured **Skype for Business or Lync server** within your isolated domain before attempting integration with the SharePoint environment.
+
+**Step 3: Enable Video Collaboration**
+Once integrated, users can perform **one-to-one or conference video calls** directly through their video-enabled SharePoint accounts, facilitating face-to-face team interactions.
+
+**Step 4: Facilitate Online File Sharing**
+Leverage the ability to perform **online file sharing** with all video-enabled users, allowing team members to distribute data instantly during active collaboration sessions.
+
+**Step 5: Conduct Real-Time Document Discussions**
+Use the platform to open specific files and hold **detailed discussions** on those documents while engaging with live video audiences.
+
+**Step 6: Trigger Integrated Environment Alerts**
+Take advantage of the connected ecosystem to **trigger email alerts** and stay informed about updates and collaborative milestones within the farm.
+
+**Step 7: Recognize Version Support**
+Note that while Skype for Business was a primary focus for **2016 and 2019 on-premise versions**, Microsoft is currently shifting its roadmap toward Microsoft Teams.
+
+**Step 8: Monitor On-Premise Teams Integration**
+Be aware that a full on-premise version of **Microsoft Teams integration** for isolated domains is not yet available, though it remains a hoped-for feature for future extensions.
+
+**Step 9: Maintain Legacy Compatibility**
+Continue to use **Microsoft Lync or legacy Skype for Business** servers to achieve these specific video and sharing benefits in existing on-premise infrastructures.
+
+**Step 10: Build a Centralized Communication Hub**
+Finalize the integration to ensure that all team collaboration—from video conferencing to document discussion—is housed within a single, **unified SharePoint ecosystem**.
+

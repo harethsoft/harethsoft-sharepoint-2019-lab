@@ -1,0 +1,34 @@
+ **changing the upload limit in a SharePoint 2019 web application**, here is the step-by-step guide for administrative configuration, 
+
+
+**Step 1: Understand the Default Upload Limit**
+Recognize that by default, the SharePoint 2019 on-premise environment allows you to upload data with a maximum size limit of **10 GB**. This applies whether data is uploaded directly or through an upload-download utility.
+
+**Step 2: Access Central Administration**
+Log in to your server and open the **SharePoint Central Administration** portal to begin the configuration process.
+
+**Step 3: Navigate to Web Application Management**
+Go to the **Application Management** section and click on the **Manage web applications** link.
+
+**Step 4: Select the Target Web Application**
+Identify and select the specific web application (e.g., your logistics and supply chain site) where you want to modify the data upload quantity.
+
+**Step 5: Open General Settings**
+Once the web application is selected, click on the **General Settings** option located in the ribbon at the top of the page.
+
+**Step 6: Locate the Maximum Upload Size Field**
+Scroll to the bottom of the General Settings window. You will find a field labeled **"Maximum upload size"** where the current limit is defined.
+
+**Step 7: Define the New Upload Limit**
+Change the value in the field to meet your specific requirements. For example, to reduce the limit from 10 GB to **2 GB**, you would enter **2048 MB** into the box.
+
+**Step 8: Save the Configuration Changes**
+Click the **OK** button at the bottom of the settings page to apply the new limit to your web application.
+
+**Step 9: Verify the Change**
+Confirm that the upload size limit has been successfully altered in the system. In this example, the limit is now strictly enforced at 2 GB instead of the original 10 GB.
+
+**Step 10: Control User Data Uploads**
+By adjusting these settings, you effectively control the amount of data users can upload at one time to your document libraries, helping to manage server resources and storage more efficiently.
+
+Would you like me to create a **Tailored Report** comparing the performance impact of high vs. low maximum upload sizes on SharePoint databases?

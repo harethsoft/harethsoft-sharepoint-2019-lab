@@ -1,0 +1,102 @@
+
+
+## 4. Installing SharePoint 2019 – Web Front End (WFE) Server
+
+###    install windows features
+### 1. Prepare the Web Front End Server
+
+1. Install Windows Server on the WFE server.
+2. Join the server to the domain.
+3. Set a **static IP address**.
+4. Verify DNS resolution with the Domain Controller, SQL Server, and Application Server.
+5. Log in using the **sp19admin** account.
+6.add sp19admin ,sp19sql,sp19farm to local admin groups of sharepoint server front end
+Explanation:
+The Web Front End server handles user requests, rendering SharePoint pages, and serving web content. It requires proper network and domain integration.
+
+---
+
+### 2. Install SharePoint Prerequisites
+
+1. Mount the SharePoint 2019 media.
+2. Run **PrerequisiteInstaller.exe**.
+3. Accept license terms.
+4. Allow the server to reboot if required.
+
+Explanation:
+Prerequisites ensure IIS, .NET Framework, and other features needed to host SharePoint web applications are installed.
+
+---
+
+### 3. Install SharePoint Server 2019
+
+1. Run **Setup.exe** from the SharePoint media.
+2. Enter the SharePoint product key.
+3. Accept license terms.
+4. Choose **Complete** installation.
+5. Finish setup without running the configuration wizard.
+
+Explanation:
+Complete installation ensures the server can host web front end roles and connect to the farm.
+
+---
+
+### 4. Join SharePoint Farm
+
+1. Launch **SharePoint Products Configuration Wizard**.
+2. Select **Connect to an existing farm**.
+3. Enter SQL Server name and configuration database.
+4. Enter **sp19farm** credentials.
+5.select the role -front-end- with distributed cache
+5. Complete the wizard.
+
+Explanation:
+This connects the WFE server to the existing SharePoint farm, allowing it to serve web content.
+
+--
+
+### SharePoint Front End (WFE) Server
+
+**Purpose:**
+
+* Handles **user requests** (web pages, forms, content rendering).
+* Hosts **IIS and web applications**.
+* Processes **search queries** (but not the indexing, which is done by the backend).
+
+**Why multiple WFEs?**
+
+* **Load balancing:** Distribute user traffic across multiple servers.
+* **High availability:** If one WFE fails, others continue serving users.
+* **Scalability:** Support more users by adding extra WFEs without touching the backend.
+
+---
+
+### SharePoint Backend / Application / Database Server
+
+**Purpose:**
+
+* Hosts **SQL Server** (all SharePoint databases).
+* Runs **central administration**, service applications, and background jobs.
+* Handles **search indexing**, workflows, timer jobs, and farm configuration.
+
+**Why it’s needed:**
+
+* All **data storage and processing** happens here.
+* WFEs rely on the backend to **store and retrieve content**.
+
+---
+
+### Summary
+
+* **Frontend (WFE):** User-facing, fast response, can be multiple for load and redundancy.
+* **Backend / Application / DB:** Core processing, single or multiple depending on farm size, stores all SharePoint data.
+* **You need both** because front end cannot function without backend — it only serves content that backend provides.
+
+Think of it like a **restaurant**:
+
+* Front end = waiters serving customers
+* Backend = kitchen cooking and preparing orders
+pls see the snapshot 4.01
+also 4.02 Data flow between user and servers
+
+
