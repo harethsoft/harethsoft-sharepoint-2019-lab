@@ -1,5 +1,5 @@
 `
-## 3. Installing SharePoint – Creating SharePoint Application Server with Search Feature
+## 3. Installing SharePoint â€“ Creating SharePoint Application Server with Search Feature
 
 ### 1. Prepare the SharePoint Application Server
 
