@@ -1,0 +1,134 @@
+Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Select-Object DistinguishedName
+
+
+# 1. تحديد المسار الصحيح بناءً على نتائجك (SHAREPOINT كابيتال)
+$baseOU = "OU=SHAREPOINT,DC=harethsoft,DC=com"
+$password = ConvertTo-SecureString "Hareth@2030" -AsPlainText -Force
+
+# 2. إنشاء المجموعات (Groups) في المسار الرئيسي
+New-ADGroup -Name "All_Users" -GroupScope Global -Path $baseOU
+New-ADGroup -Name "HR_Group" -GroupScope Global -Path "OU=hr,$baseOU"
+New-ADGroup -Name "Finance_Group" -GroupScope Global -Path "OU=finance,$baseOU"
+New-ADGroup -Name "IT_Group" -GroupScope Global -Path "OU=ITservicedesk,$baseOU"
+New-ADGroup -Name "ServiceDesk_Group" -GroupScope Global -Path "OU=ITservicedesk,$baseOU"
+
+# 3. إنشاء مستخدمي Finance (5 مستخدمين)
+1..5 | ForEach-Object {
+    $u = New-ADUser -Name "FinanceUser$_" -SamAccountName "fin$_" -UserPrincipalName "fin$_@harethsoft.com" -Path "OU=finance,$baseOU" -AccountPassword $password -Enabled $true -PassThru
+    Add-ADGroupMember -Identity "Finance_Group" -Members $u
+    Add-ADGroupMember -Identity "All_Users" -Members $u
+}
+
+# 4. إنشاء مستخدمي HR (5 مستخدمين)
+1..5 | ForEach-Object {
+    $u = New-ADUser -Name "HRUser$_" -SamAccountName "hr$_" -UserPrincipalName "hr$_@harethsoft.com" -Path "OU=hr,$baseOU" -AccountPassword $password -Enabled $true -PassThru
+    Add-ADGroupMember -Identity "HR_Group" -Members $u
+    Add-ADGroupMember -Identity "All_Users" -Members $u
+}
+
+# 5. إنشاء مستخدمي IT (5 مستخدمين)
+1..5 | ForEach-Object {
+    $u = New-ADUser -Name "ITUser$_" -SamAccountName "it$_" -UserPrincipalName "it$_@harethsoft.com" -Path "OU=ITservicedesk,$baseOU" -AccountPassword $password -Enabled $true -PassThru
+    Add-ADGroupMember -Identity "IT_Group" -Members $u
+    Add-ADGroupMember -Identity "All_Users" -Members $u
+}
+
+# 6. إنشاء مستخدمي ServiceDesk (5 مستخدمين)
+1..5 | ForEach-Object {
+    $u = New-ADUser -Name "SDUser$_" -SamAccountName "sd$_" -UserPrincipalName "sd$_@harethsoft.com" -Path "OU=ITservicedesk,$baseOU" -AccountPassword $password -Enabled $true -PassThru
+    Add-ADGroupMember -Identity "ServiceDesk_Group" -Members $u
+    Add-ADGroupMember -Identity "All_Users" -Members $u
+}
+
+Write-Host "تم تنفيذ السيناريو بنجاح كامل!" -ForegroundColor Cyan
+
+
+
+
+# 1. الإعدادات الأساسية
+$baseOU = "OU=SHAREPOINT,DC=harethsoft,DC=com"
+$passText = "Hareth@2030"
+$password = ConvertTo-SecureString $passText -AsPlainText -Force
+
+# دالة (Function) لإنشاء المجموعة إذا لم تكن موجودة
+function Create-GroupQuick ($gName, $gPath) {
+    if (!(Get-ADGroup -Filter "Name -eq '$gName'")) {
+        New-ADGroup -Name $gName -GroupScope Global -Path $gPath
+    }
+}
+
+# 2. إنشاء جميع المجموعات المطلوبة أولاً
+Create-GroupQuick "All_Users" $baseOU
+Create-GroupQuick "HR_Group" "OU=hr,$baseOU"
+Create-GroupQuick "Finance_Group" "OU=finance,$baseOU"
+Create-GroupQuick "IT_Group" "OU=ITservicedesk,$baseOU"
+Create-GroupQuick "ServiceDesk_Group" "OU=ITservicedesk,$baseOU"
+
+# 3. إنشاء مستخدمي Finance (5)
+1..5 | % {
+    $sam = "fin$_"; $upn = "$sam@harethsoft.com"; $path = "OU=finance,$baseOU"
+    if (!(Get-ADUser -Filter "SamAccountName -eq '$sam'")) {
+        $u = New-ADUser -Name "FinanceUser$_" -SamAccountName $sam -UserPrincipalName $upn -Path $path -AccountPassword $password -Enabled $true -PassThru
+        Add-ADGroupMember -Identity "Finance_Group" -Members $u
+        Add-ADGroupMember -Identity "All_Users" -Members $u
+    }
+}
+
+# 4. إنشاء مستخدمي HR (5)
+1..5 | % {
+    $sam = "hr$_"; $upn = "$sam@harethsoft.com"; $path = "OU=hr,$baseOU"
+    if (!(Get-ADUser -Filter "SamAccountName -eq '$sam'")) {
+        $u = New-ADUser -Name "HRUser$_" -SamAccountName $sam -UserPrincipalName $upn -Path $path -AccountPassword $password -Enabled $true -PassThru
+        Add-ADGroupMember -Identity "HR_Group" -Members $u
+        Add-ADGroupMember -Identity "All_Users" -Members $u
+    }
+}
+
+# 5. إنشاء مستخدمي IT (5) في OU=ITservicedesk
+1..5 | % {
+    $sam = "it$_"; $upn = "$sam@harethsoft.com"; $path = "OU=ITservicedesk,$baseOU"
+    if (!(Get-ADUser -Filter "SamAccountName -eq '$sam'")) {
+        $u = New-ADUser -Name "ITUser$_" -SamAccountName $sam -UserPrincipalName $upn -Path $path -AccountPassword $password -Enabled $true -PassThru
+        Add-ADGroupMember -Identity "IT_Group" -Members $u
+        Add-ADGroupMember -Identity "All_Users" -Members $u
+    }
+}
+
+# 6. إنشاء مستخدمي ServiceDesk (5) في OU=ITservicedesk
+1..5 | % {
+    $sam = "sd$_"; $upn = "$sam@harethsoft.com"; $path = "OU=ITservicedesk,$baseOU"
+    if (!(Get-ADUser -Filter "SamAccountName -eq '$sam'")) {
+        $u = New-ADUser -Name "SDUser$_" -SamAccountName $sam -UserPrincipalName $upn -Path $path -AccountPassword $password -Enabled $true -PassThru
+        Add-ADGroupMember -Identity "ServiceDesk_Group" -Members $u
+        Add-ADGroupMember -Identity "All_Users" -Members $u
+    }
+}
+
+Write-Host "تم الانتهاء! راجع الآن الـ Active Directory ستجد الـ 20 مستخدم جاهزين." -ForegroundColor Cyan
+
+
+
+# 1. تحديد المسار والجروب الجديد
+$baseOU = "OU=SHAREPOINT,DC=harethsoft,DC=com"
+$allUsersGroupName = "allusers"
+
+# 2. إنشاء الجروب إذا لم يكن موجوداً
+if (!(Get-ADGroup -Filter "Name -eq '$allUsersGroupName'")) {
+    New-ADGroup -Name $allUsersGroupName -GroupScope Global -Path $baseOU
+    Write-Host "تم إنشاء الجروب $allUsersGroupName بنجاح." -ForegroundColor Green
+}
+
+# 3. جلب كافة المستخدمين الذين تبدأ أسماؤهم بـ (fin, hr, it, sd) وإضافتهم للجروب
+$users = Get-ADUser -Filter "SamAccountName -like 'fin*' -or SamAccountName -like 'hr*' -or SamAccountName -like 'it*' -or SamAccountName -like 'sd*'"
+Add-ADGroupMember -Identity $allUsersGroupName -Members $users
+
+Write-Host "تمت إضافة $($users.Count) مستخدم إلى جروب $allUsersGroupName بنجاح!" -ForegroundColor Cyan
+
+
+
+
+Get-ADGroupMember -Identity "allusers" | Select-Object Name, SamAccountName
+
+
+
+

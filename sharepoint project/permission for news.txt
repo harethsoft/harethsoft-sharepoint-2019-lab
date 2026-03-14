@@ -1,0 +1,28 @@
+
+### **Summary of Steps: Enabling Target Audience in SharePoint 2019**
+
+**1. Library Activation**
+
+* Go to **Site Pages** > **Library Settings**.
+* Click on **Audience Targeting Settings**.
+* Check the box: **Enable Audience Targeting** and click **OK**.
+
+**2. Assigning Groups to News (The Manual Way)**
+
+* Go to **Site Pages** library.
+* Click the **three dots (...)** next to the News article.
+* Select **More** > **Properties** (or **Edit Item**).
+* Locate the field named **Target Audiences**.
+* Type the specific group name (e.g., `Finance_Group` or `IT_Group`).
+* Click **Save**.
+
+**3. Homepage Web Part Configuration**
+
+* Go to the **Home Page** and click **Edit**.
+* Edit the **News Web Part** (click the pencil icon).
+* Switch the **Enable Audience Targeting** toggle to **On**.
+* **Publish** the page.
+
+---
+
+**هل هذا هو الملخص المطلوب للجزء الأخير بالتحديد؟**

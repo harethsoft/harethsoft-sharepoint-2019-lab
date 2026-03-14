@@ -1,0 +1,52 @@
+project in SharePoint 2019 creating website with 3 departments
+
+step 1
+create new web application (harethsoftintranet)
+
+step 2
+creating site collection for web application
+name : home
+template: communication site
+
+step 3
+creating DNS records for harethsoftintranet
+
+step 4
+test http://harethsoftintranet:22773  
+
+step 5
+creating 3 site collections  for departments
+1. IT & service desk type team site
+2. HR dept    type team site
+3. Finance    type team site
+
+step 6
+link the created sites in home page
+
+step 7
+designing home page and designing pages for created sites
+
+
+step 8
+creating users and groups in AD for each department
+
+step 9 
+assign permission for home page to all users
+and assign permission for it and service desk to it and service desk employee
+and assign permission for hr  to hr employee
+and assign permission for finance to finance employee
+
+step 10
+test permission with
+fin1   finance user password Hareth@2030
+hr1    hr user   password Hareth@2030
+it1   it user  password Hareth@2030
+sd4   service desk user  password Hareth@2030
+
+step 11
+in  IT & service desk create two document
+IT soft give permission only to IT employee 
+service desk soft give permission only to service desk employee 
+
+
+
