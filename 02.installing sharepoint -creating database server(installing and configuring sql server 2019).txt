@@ -1,5 +1,5 @@
 
-## 2. Installing SharePoint – Creating Database Server (Installing and Configuring SQL Server 2019)
+## 2. Installing SharePoint â€“ Creating Database Server (Installing and Configuring SQL Server 2019)
 
 ### 1. Install SQL Server 2019
 
