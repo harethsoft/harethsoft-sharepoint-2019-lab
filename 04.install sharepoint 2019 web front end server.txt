@@ -1,6 +1,6 @@
 
 
-## 4. Installing SharePoint 2019 – Web Front End (WFE) Server
+## 4. Installing SharePoint 2019 â€“ Web Front End (WFE) Server
 
 ###    install windows features
 ### 1. Prepare the Web Front End Server
@@ -79,7 +79,7 @@ This connects the WFE server to the existing SharePoint farm, allowing it to ser
 * Runs **central administration**, service applications, and background jobs.
 * Handles **search indexing**, workflows, timer jobs, and farm configuration.
 
-**Why it’s needed:**
+**Why itâ€™s needed:**
 
 * All **data storage and processing** happens here.
 * WFEs rely on the backend to **store and retrieve content**.
@@ -90,7 +90,7 @@ This connects the WFE server to the existing SharePoint farm, allowing it to ser
 
 * **Frontend (WFE):** User-facing, fast response, can be multiple for load and redundancy.
 * **Backend / Application / DB:** Core processing, single or multiple depending on farm size, stores all SharePoint data.
-* **You need both** because front end cannot function without backend — it only serves content that backend provides.
+* **You need both** because front end cannot function without backend â€” it only serves content that backend provides.
 
 Think of it like a **restaurant**:
 
