@@ -1,9 +1,9 @@
 
-## 5. Modern Team Sites Template – SharePoint 2019 
+## 5. Modern Team Sites Template â€“ SharePoint 2019 
 
 ### ?? Lesson Objective
 
-You want to know **how to create and use a Modern Team Site in SharePoint 2019** — not just theory, but **how to do it step-by-step**
+You want to know **how to create and use a Modern Team Site in SharePoint 2019** â€” not just theory, but **how to do it step-by-step**
 
 ---
 
